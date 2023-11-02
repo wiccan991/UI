@@ -1,0 +1,11 @@
+C:\Users\user\Desktop\egyetem\QCYDS9_HFT_2023241\QCYDS9_HFT_2023241\QCYDS9_HFT_2023241.Models\bin\Debug\net5.0\QCYDS9_HFT_2023241.Models.deps.json
+C:\Users\user\Desktop\egyetem\QCYDS9_HFT_2023241\QCYDS9_HFT_2023241\QCYDS9_HFT_2023241.Models\bin\Debug\net5.0\QCYDS9_HFT_2023241.Models.dll
+C:\Users\user\Desktop\egyetem\QCYDS9_HFT_2023241\QCYDS9_HFT_2023241\QCYDS9_HFT_2023241.Models\bin\Debug\net5.0\QCYDS9_HFT_2023241.Models.pdb
+C:\Users\user\Desktop\egyetem\QCYDS9_HFT_2023241\QCYDS9_HFT_2023241\QCYDS9_HFT_2023241.Models\obj\Debug\net5.0\QCYDS9_HFT_2023241.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\egyetem\QCYDS9_HFT_2023241\QCYDS9_HFT_2023241\QCYDS9_HFT_2023241.Models\obj\Debug\net5.0\QCYDS9_HFT_2023241.Models.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\egyetem\QCYDS9_HFT_2023241\QCYDS9_HFT_2023241\QCYDS9_HFT_2023241.Models\obj\Debug\net5.0\QCYDS9_HFT_2023241.Models.AssemblyInfo.cs
+C:\Users\user\Desktop\egyetem\QCYDS9_HFT_2023241\QCYDS9_HFT_2023241\QCYDS9_HFT_2023241.Models\obj\Debug\net5.0\QCYDS9_HFT_2023241.Models.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\egyetem\QCYDS9_HFT_2023241\QCYDS9_HFT_2023241\QCYDS9_HFT_2023241.Models\obj\Debug\net5.0\QCYDS9_HFT_2023241.Models.dll
+C:\Users\user\Desktop\egyetem\QCYDS9_HFT_2023241\QCYDS9_HFT_2023241\QCYDS9_HFT_2023241.Models\obj\Debug\net5.0\refint\QCYDS9_HFT_2023241.Models.dll
+C:\Users\user\Desktop\egyetem\QCYDS9_HFT_2023241\QCYDS9_HFT_2023241\QCYDS9_HFT_2023241.Models\obj\Debug\net5.0\QCYDS9_HFT_2023241.Models.pdb
+C:\Users\user\Desktop\egyetem\QCYDS9_HFT_2023241\QCYDS9_HFT_2023241\QCYDS9_HFT_2023241.Models\obj\Debug\net5.0\ref\QCYDS9_HFT_2023241.Models.dll
