@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v5.0": {
       "QCYDS9_HFT_2023241.Client/1.0.0": {
         "dependencies": {
+          "QCYDS9_HFT_2023241.Logic": "1.0.0",
           "QCYDS9_HFT_2023241.Models": "1.0.0",
           "QCYDS9_HFT_2023241.Repository": "1.0.0"
         },
@@ -979,6 +980,15 @@
           "System.Xml.ReaderWriter": "4.3.0"
         }
       },
+      "QCYDS9_HFT_2023241.Logic/1.0.0": {
+        "dependencies": {
+          "QCYDS9_HFT_2023241.Models": "1.0.0",
+          "QCYDS9_HFT_2023241.Repository": "1.0.0"
+        },
+        "runtime": {
+          "QCYDS9_HFT_2023241.Logic.dll": {}
+        }
+      },
       "QCYDS9_HFT_2023241.Models/1.0.0": {
         "runtime": {
           "QCYDS9_HFT_2023241.Models.dll": {}
@@ -1724,6 +1734,11 @@
       "sha512": "sha512-lJ8AxvkX7GQxpC6GFCeBj8ThYVyQczx2+f/cWHJU8tjS7YfI6Cv6bon70jVEgs2CiFbmmM8b9j1oZVx0dSI2Ww==",
       "path": "system.xml.xmldocument/4.3.0",
       "hashPath": "system.xml.xmldocument.4.3.0.nupkg.sha512"
+    },
+    "QCYDS9_HFT_2023241.Logic/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "QCYDS9_HFT_2023241.Models/1.0.0": {
       "type": "project",

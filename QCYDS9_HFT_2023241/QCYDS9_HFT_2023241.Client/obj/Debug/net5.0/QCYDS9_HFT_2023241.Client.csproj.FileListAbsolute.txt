@@ -36,3 +36,5 @@ C:\Users\user\Desktop\egyetem\QCYDS9_HFT_2023241\QCYDS9_HFT_2023241\QCYDS9_HFT_2
 C:\Users\user\Desktop\egyetem\QCYDS9_HFT_2023241\QCYDS9_HFT_2023241\QCYDS9_HFT_2023241.Client\obj\Debug\net5.0\QCYDS9_HFT_2023241.Client.pdb
 C:\Users\user\Desktop\egyetem\QCYDS9_HFT_2023241\QCYDS9_HFT_2023241\QCYDS9_HFT_2023241.Client\obj\Debug\net5.0\QCYDS9_HFT_2023241.Client.genruntimeconfig.cache
 C:\Users\user\Desktop\egyetem\QCYDS9_HFT_2023241\QCYDS9_HFT_2023241\QCYDS9_HFT_2023241.Client\obj\Debug\net5.0\ref\QCYDS9_HFT_2023241.Client.dll
+C:\Users\user\Desktop\egyetem\QCYDS9_HFT_2023241\QCYDS9_HFT_2023241\QCYDS9_HFT_2023241.Client\bin\Debug\net5.0\QCYDS9_HFT_2023241.Logic.dll
+C:\Users\user\Desktop\egyetem\QCYDS9_HFT_2023241\QCYDS9_HFT_2023241\QCYDS9_HFT_2023241.Client\bin\Debug\net5.0\QCYDS9_HFT_2023241.Logic.pdb

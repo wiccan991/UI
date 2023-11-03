@@ -1797,6 +1797,20 @@
           "lib/netstandard1.3/System.Xml.XmlDocument.dll": {}
         }
       },
+      "QCYDS9_HFT_2023241.Logic/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "QCYDS9_HFT_2023241.Models": "1.0.0",
+          "QCYDS9_HFT_2023241.Repository": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/QCYDS9_HFT_2023241.Logic.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/QCYDS9_HFT_2023241.Logic.dll": {}
+        }
+      },
       "QCYDS9_HFT_2023241.Models/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -6022,6 +6036,11 @@
         "system.xml.xmldocument.nuspec"
       ]
     },
+    "QCYDS9_HFT_2023241.Logic/1.0.0": {
+      "type": "project",
+      "path": "../QCYDS9_HFT_2023241.Logic/QCYDS9_HFT_2023241.Logic.csproj",
+      "msbuildProject": "../QCYDS9_HFT_2023241.Logic/QCYDS9_HFT_2023241.Logic.csproj"
+    },
     "QCYDS9_HFT_2023241.Models/1.0.0": {
       "type": "project",
       "path": "../QCYDS9_HFT_2023241.Models/QCYDS9_HFT_2023241.Models.csproj",
@@ -6035,6 +6054,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "QCYDS9_HFT_2023241.Logic >= 1.0.0",
       "QCYDS9_HFT_2023241.Models >= 1.0.0",
       "QCYDS9_HFT_2023241.Repository >= 1.0.0"
     ]
@@ -6071,6 +6091,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "C:\\Users\\user\\Desktop\\egyetem\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Logic\\QCYDS9_HFT_2023241.Logic.csproj": {
+              "projectPath": "C:\\Users\\user\\Desktop\\egyetem\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Logic\\QCYDS9_HFT_2023241.Logic.csproj"
+            },
             "C:\\Users\\user\\Desktop\\egyetem\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Models\\QCYDS9_HFT_2023241.Models.csproj": {
               "projectPath": "C:\\Users\\user\\Desktop\\egyetem\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Models\\QCYDS9_HFT_2023241.Models.csproj"
             },

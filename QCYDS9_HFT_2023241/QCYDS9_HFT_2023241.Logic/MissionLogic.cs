@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace QCYDS9_HFT_2023241.Logic
 {
-    public class MissionLogic 
+    public class MissionLogic : IMissionLogic
     {
         IRepository<Mission> repo;
 
@@ -46,5 +46,7 @@ namespace QCYDS9_HFT_2023241.Logic
         {
             this.repo.Update(item);
         }
+
+
     }
 }

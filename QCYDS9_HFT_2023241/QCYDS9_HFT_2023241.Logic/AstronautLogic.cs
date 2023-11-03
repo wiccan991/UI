@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace QCYDS9_HFT_2023241.Logic
 {
-    public class AstronautLogic 
+    public class AstronautLogic : IAstronautLogic
     {
         IRepository<Astronaut> repo;
 
