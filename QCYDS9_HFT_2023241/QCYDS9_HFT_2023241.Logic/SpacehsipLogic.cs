@@ -8,16 +8,16 @@ using System.Threading.Tasks;
 
 namespace QCYDS9_HFT_2023241.Logic
 {
-    public class MissionLogic 
+    public class SpacehsipLogic
     {
-        IRepository<Mission> repo;
+        IRepository<Spaceship> repo;
 
-        public MissionLogic(IRepository<Mission> repo)
+        public SpacehsipLogic(IRepository<Spaceship> repo)
         {
             this.repo = repo;
         }
 
-        public void Create(Mission item)
+        public void Create(Spaceship item)
         {
             this.repo.Create(item);
         }
@@ -27,22 +27,22 @@ namespace QCYDS9_HFT_2023241.Logic
             this.repo.Delete(id);
         }
 
-        public Mission Read(int id)
+        public Spaceship Read(int id)
         {
-            var mission = this.repo.Read(id);
-            if (mission == null)
+            var Spaceship = this.repo.Read(id);
+            if (Spaceship == null)
             {
-                throw new ArgumentException("Mission not exists.");
+                throw new ArgumentException("Spaceship not exists.");
             }
             return this.repo.Read(id);
         }
 
-        public IQueryable<Mission> ReadAll()
+        public IQueryable<Spaceship> ReadAll()
         {
             return this.repo.ReadAll();
         }
 
-        public void Update(Mission item)
+        public void Update(Spaceship item)
         {
             this.repo.Update(item);
         }
