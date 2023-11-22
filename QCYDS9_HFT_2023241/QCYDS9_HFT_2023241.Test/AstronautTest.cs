@@ -11,7 +11,7 @@ using System.Numerics;
 namespace QCYDS9_HFT_2023241.Test
 {
     [TestFixture]
-    public class AstronautTest
+    internal class AstronautTest
     {
         AstronautLogic astrolo;
         Mock<IRepository<Astronaut>> mockAstronautRepository;
