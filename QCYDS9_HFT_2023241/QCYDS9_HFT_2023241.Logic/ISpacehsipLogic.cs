@@ -13,5 +13,7 @@ namespace QCYDS9_HFT_2023241.Logic
         Spaceship Read(int id);
         IEnumerable<Spaceship> ReadAll();
         void Update(Spaceship item);
+
+        IEnumerable<YouthSquadInfo> GetYouthSquadInfo();
     }
 }

@@ -50,5 +50,20 @@ namespace QCYDS9_HFT_2023241.Logic
             this.repo.Update(item);
         }
 
+        public IEnumerable<YouthSquadInfo> GetYouthSquadInfo()
+        {
+
+            return this.repo.ReadAll()
+            .SelectMany(t => t.Missions)
+            .GroupBy(t => t.MissionId)
+            .Select(g => new YouthSquadInfo()
+            {
+
+                MissionId = g.Key,
+                CheapMission = g.Sum(t=>t.BudgetMDollar)
+            }); ;
+
+        }
+
     }
 }
