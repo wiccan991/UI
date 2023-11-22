@@ -13,7 +13,7 @@ namespace QCYDS9_HFT_2023241.Logic
         IRepository<Spaceship> repo;
       
 
-        private SpacehsipLogic(IRepository<Spaceship> repo)
+        public SpacehsipLogic(IRepository<Spaceship> repo)
         {
             this.repo = repo;
             
@@ -22,7 +22,14 @@ namespace QCYDS9_HFT_2023241.Logic
 
         public void Create(Spaceship item)
         {
-            this.repo.Create(item);
+            if (item.Id < 0)
+            {
+                throw new ArgumentException("The spaceship ID cannot be negative!");
+            }
+            else
+            {
+                this.repo.Create(item);
+            }
         }
 
         public void Delete(int id)

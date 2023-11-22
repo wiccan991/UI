@@ -21,7 +21,14 @@ namespace QCYDS9_HFT_2023241.Logic
 
         public void Create(Mission item)
         {
-            this.repo.Create(item);
+            if (item.MissionId < 0)
+            {
+                throw new ArgumentException("The misiion ID cannot be negative!");
+            }
+            else
+            {
+                this.repo.Create(item);
+            }
         }
 
         public void Delete(int id)
