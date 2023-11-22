@@ -58,23 +58,23 @@ namespace QCYDS9_HFT_2023241.Repository
             {
                new Spaceship(1, "Apollo 11", 39937, 1969),
                 new Spaceship(2, "Voyager 1", 61409, 1977),
-                new Spaceship(7, "Space Shuttle Discovery", 27650, 1983),
+                new Spaceship(3, "Space Shuttle Discovery", 27650, 1983),
                 new Spaceship(4, "New Horizons", 16260, 2006),
                 new Spaceship(5, "Juno", 22265, 2011),
                 new Spaceship(6, "Perseverance Rover", 9995, 2020) });
 
             modelBuilder.Entity<Astronaut>().HasData(new Astronaut[]
-            {   new Astronaut(1, 3, "Jeffrey Williams", "USA", 1958,true),
-                new Astronaut(2, 1, "Aleksey Ovchinin", "RUS", 1971,true),
+            {   new Astronaut(1, 1, "Jeffrey Williams", "USA", 20,true),
+                new Astronaut(2, 1, "Aleksey Ovchinin", "RUS", 30,true),
                 
-                new Astronaut(4, 4, "Ernst Messerschmid", "GER", 1945, true),
-                new Astronaut(5, 1, "Wubbo Ockels", "NED", 1946, true),
-                new Astronaut(6, 6, "Amanda Gibson", "USA", 1936, false),
-                new Astronaut(7, 2, "William Pogue", "USA", 1930, true),
-                new Astronaut(8, 4, "Gerald P. Carr", "USA", 1932, true),
-                new Astronaut(9, 2, "Frank De Winne", "BEL", 1961, true),
-                new Astronaut(10,1, "John 'Jack' Swigert", "USA", 1931, true),
-                new Astronaut(11, 4, "Paula Lovell", "USA", 1928, false)
+                new Astronaut(4, 4, "Ernst Messerschmid", "GER", 45, true),
+                new Astronaut(5, 1, "Wubbo Ockels", "NED", 87, true),
+                new Astronaut(6, 6, "Amanda Gibson", "USA", 66, false),
+                new Astronaut(7, 2, "William Pogue", "USA", 77, true),
+                new Astronaut(8, 4, "Gerald P. Carr", "USA", 88, true),
+                new Astronaut(9, 2, "Frank De Winne", "BEL", 28, true),
+                new Astronaut(10,1, "John 'Jack' Swigert", "USA", 26, true),
+                new Astronaut(11, 4, "Paula Lovell", "USA", 27, false)
             });
 
             //var missions = new List<Mission>()

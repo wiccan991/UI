@@ -1,4 +1,6 @@
 ﻿using QCYDS9_HFT_2023241.Models;
+using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace QCYDS9_HFT_2023241.Logic
@@ -7,9 +9,9 @@ namespace QCYDS9_HFT_2023241.Logic
     {
         void Create(Spaceship item);
         void Delete(int id);
-        IQueryable<object> GetSpaceshipsAndMissionsAndAstronauts();
+        //IEnumerable<Tuple<string, string>> GetAstronautsAndSpaceships();
         Spaceship Read(int id);
-        IQueryable<Spaceship> ReadAll();
+        IEnumerable<Spaceship> ReadAll();
         void Update(Spaceship item);
     }
 }

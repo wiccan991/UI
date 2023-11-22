@@ -1,4 +1,5 @@
 ﻿using QCYDS9_HFT_2023241.Models;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace QCYDS9_HFT_2023241.Logic
@@ -8,7 +9,7 @@ namespace QCYDS9_HFT_2023241.Logic
         void Create(Mission item);
         void Delete(int id);
         Mission Read(int id);
-        IQueryable<Mission> ReadAll();
+        IEnumerable<Mission> ReadAll();
         void Update(Mission item);
     }
 }

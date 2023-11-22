@@ -1,5 +1,7 @@
 ﻿using QCYDS9_HFT_2023241.Models;
+using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 
 namespace QCYDS9_HFT_2023241.Logic
 {
@@ -8,7 +10,10 @@ namespace QCYDS9_HFT_2023241.Logic
         void Create(Astronaut item);
         void Delete(int id);
         Astronaut Read(int id);
-        IQueryable<Astronaut> ReadAll();
+        IEnumerable<Astronaut> ReadAll();
         void Update(Astronaut item);
+        IEnumerable<Astronaut> GetAstronautsYoungerThanX(int x);
+        int GetYoungestAstonautAge();
+        int GetYoungsterSalaryInfo();
     }
 }

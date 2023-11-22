@@ -10,7 +10,9 @@ namespace QCYDS9_HFT_2023241.Logic
 {
     public class MissionLogic : IMissionLogic
     {
+        IRepository<Spaceship> spaceshiprepo;
         IRepository<Mission> repo;
+        IRepository<Astronaut> astronautRepo;
 
         public MissionLogic(IRepository<Mission> repo)
         {
@@ -37,7 +39,7 @@ namespace QCYDS9_HFT_2023241.Logic
             return this.repo.Read(id);
         }
 
-        public IQueryable<Mission> ReadAll()
+        public IEnumerable<Mission> ReadAll()
         {
             return this.repo.ReadAll();
         }

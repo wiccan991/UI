@@ -1,13 +1,18 @@
 ﻿using QCYDS9_HFT_2023241.Models;
 using QCYDS9_HFT_2023241.Repository;
 using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Headers;
+using System.Net.WebSockets;
 
 namespace QCYDS9_HFT_2023241.Logic
 {
     public class AstronautLogic : IAstronautLogic
     {
         IRepository<Astronaut> repo;
+     
+     
 
         public AstronautLogic(IRepository<Astronaut> repo)
         {
@@ -16,8 +21,12 @@ namespace QCYDS9_HFT_2023241.Logic
 
         public void Create(Astronaut item)
         {
-            if (item.BornYear < 1900) throw new ArgumentException("Born year is not vaild.");
-            this.repo.Create(item);
+            if (item.Age < 0)
+            {
+                throw new ArgumentException("The astronaut age cannot be negative!");
+            }
+            else { this.repo.Create(item); }
+           
         }
 
         public void Delete(int id)
@@ -35,14 +44,17 @@ namespace QCYDS9_HFT_2023241.Logic
             return this.repo.Read(id);
         }
 
-        public IQueryable<Astronaut> ReadAll()
+        public IEnumerable<Astronaut> ReadAll()
         {
             return this.repo.ReadAll();
+            
         }
 
         public void Update(Astronaut item)
         {
             this.repo.Update(item);
         }
+
+       
     }
 }

@@ -16,10 +16,14 @@ namespace QCYDS9_HFT_2023241.Client
 
             //var items = repo2.ReadAll().ToArray();
             var ctx = new SpaceMissionContext();
-            var repo = new AstronautRepository(ctx);
-            var logic = new AstronautLogic(repo);
+            var repo = new SpaceshipRepository(ctx);
+          
+    
+            var repo2 = new AstronautRepository (ctx);
+            var logic2 = new AstronautLogic(repo2);
 
-            var item = logic.ReadAll();
+       
+
 
             ;
         }

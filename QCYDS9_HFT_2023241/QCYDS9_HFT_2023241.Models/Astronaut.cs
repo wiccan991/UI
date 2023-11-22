@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace QCYDS9_HFT_2023241.Models
 {
@@ -20,8 +21,8 @@ namespace QCYDS9_HFT_2023241.Models
         [Required]
         public string Name { get; set; }
         public string Country { get; set; }
-        public int BornYear { get; set; }
-        public bool Gender { get; set; }
+        public int Age { get; set; }
+        public bool IsMale { get; set; }
 
         [NotMapped]
         public virtual Mission Mission { get; set; }
@@ -30,28 +31,28 @@ namespace QCYDS9_HFT_2023241.Models
 
         }
 
-        public Astronaut(int astronautId, int missionId, string name, string country, int bornYear, bool gender)
+        public Astronaut(int astronautId, int missionId, string name, string country, int age, bool ismale)
         {
             AstronautId = astronautId;
             MissionId = missionId;
             Name = name;
             Country = country;
-            BornYear = bornYear;
-            Gender = gender;
+            Age = age;
+            IsMale = ismale;
         }
-        public Astronaut(int astronautId, Mission mission, string name, string country, int bornYear, bool gender)
+        public Astronaut(int astronautId, Mission mission, string name, string country, int age, bool ismale)
         {
             AstronautId = astronautId;
             MissionId = mission.MissionId;
             Name = name;
             Country = country;
-            BornYear = bornYear;
-            Gender = gender;
+            Age = age;
+            IsMale = ismale;
         }
 
         public override string ToString()
         {
-            return $"{Name}, ({BornYear})";
+            return $"{Name}, ({Age})";
         }
     }
 }
