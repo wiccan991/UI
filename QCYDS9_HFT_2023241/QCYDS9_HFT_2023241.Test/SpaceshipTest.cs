@@ -65,6 +65,7 @@ namespace QCYDS9_HFT_2023241.Test
             {
             }
             mockSpaceshipRepository.Verify(a => a.Create(space), Times.Never());
+
         }
     }
 }
