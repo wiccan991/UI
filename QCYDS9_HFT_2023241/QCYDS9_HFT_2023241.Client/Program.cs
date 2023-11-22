@@ -106,116 +106,116 @@ namespace QCYDS9_HFT_2023241.Client
                 Console.WriteLine("Astronaut ID to modify: ");
                 int id = int.Parse(Console.ReadLine());
                 Astronaut a = rest.Get<Astronaut>(id, "astronaut");
-                Console.WriteLine($"Old name:{t.Name} new name: ");
+                Console.WriteLine($"Old name:{a.Name} new name: ");
                 string newName = Console.ReadLine();
                 a.Name = newName;
                 rest.Put(a, "astronaut");
             }
-            else if (entity == "Player")
+            else if (entity == "Mission")
             {
-                Console.WriteLine("Player ID to modify: ");
+                Console.WriteLine("Mission ID to modify: ");
                 int id = int.Parse(Console.ReadLine());
-                Player p = rest.Get<Player>(id, "player");
-                Console.WriteLine($"Old name:{p.Name} new name: ");
+                Mission m = rest.Get<Mission>(id, "mission");
+                Console.WriteLine($"Old name:{m.Name} new name: ");
                 string newName = Console.ReadLine();
-                p.Name = newName;
-                rest.Put(p, "player");
+                m.Name = newName;
+                rest.Put(m, "mission");
             }
         }
         static void Delete(string entity)
         {
-            if (entity == "League")
+            if (entity == "Mission")
             {
-                Console.WriteLine("League ID to delete: ");
+                Console.WriteLine("Mission ID to delete: ");
                 int id = int.Parse(Console.ReadLine());
-                rest.Delete(id, "league");
+                rest.Delete(id, "mission");
             }
-            else if (entity == "Team")
+            else if (entity == "Astronaut")
             {
-                Console.WriteLine("Team ID to delete: ");
+                Console.WriteLine("Astronaut ID to delete: ");
                 int id = int.Parse(Console.ReadLine());
-                rest.Delete(id, "team");
+                rest.Delete(id, "astronaut");
             }
-            else if (entity == "Player")
+            else if (entity == "Spaceship")
             {
-                Console.WriteLine("Player ID to delete: ");
+                Console.WriteLine("Spaceship ID to delete: ");
                 int id = int.Parse(Console.ReadLine());
-                rest.Delete(id, "player");
+                rest.Delete(id, "spaceship");
             }
         }
         static void YoungerThanX(string entity)
         {
-            Console.WriteLine("Players under age: ");
+            Console.WriteLine("Astronaut under age: ");
             int age = int.Parse(Console.ReadLine());
-            IEnumerable<Player> youngplayers = rest.Get<Player>("PlusInfo/GetPlayersYoungerThanX/" + age);
-            foreach (var item in youngplayers)
+            IEnumerable<Astronaut> youngastronauts = rest.Get<Astronaut>("PlusInfo/GetAstronautsYoungerThanX/" + age);
+            foreach (var item in youngastronauts)
             {
                 Console.WriteLine(item.Name);
             }
             Console.ReadLine();
         }
-        static void YoungSalary(string entity)
+        static void AmericansCountInf(string entity)
         {
-            int x = rest.GetSingle<int>("PlusInfo/GetYoungsterSalaryInfo");
-            Console.WriteLine("U20 Players salary sum: " + x);
+            int x = rest.GetSingle<int>("PlusInfo/GetAmericansCountInf");
+            Console.WriteLine("Number of American astronauts: " + x);
             Console.ReadLine();
         }
-        static void YoungestPlayerAge(string entity)
+        static void YoungestAstonautAge(string entity)
         {
-            int x = rest.GetSingle<int>("PlusInfo/GetYoungestPlayerAge");
-            Console.WriteLine("The youngest player age is: " + x);
+            int x = rest.GetSingle<int>("PlusInfo/GetYoungestAstonautAge");
+            Console.WriteLine("The youngest astronauts age is: " + x);
             Console.ReadLine();
         }
-        static void AverageSalary(string entity)
+        static void AverageAstonautsAgeInMission(string entity)
         {
-            Console.WriteLine("Team ID: ");
+            Console.WriteLine("Mission ID: ");
             int id = int.Parse(Console.ReadLine());
-            double x = rest.GetSingle<double>("PlusInfo/AverageSalary/" + id);
+            double x = rest.GetSingle<double>("PlusInfo/AverageAstonautsAgeInMission/" + id);
             Console.WriteLine(x);
             Console.ReadKey();
         }
         static void YouthSquadInfo(string entity)
         {
-            var ysi = rest.Get<YouthSquadInfo>("YouthSquadInfo/GetYSI");
+            var ysi = rest.Get<YouthSquadInfo>("GetYouthSquadInfo/GetYSI");
             foreach (var item in ysi)
             {
-                Console.WriteLine("League ID: " + item.LeagueId);
-                Console.WriteLine("Youth Squad Counter: " + item.YouthSquadsInLeague);
+                Console.WriteLine("Spaceship ID: " + item.MissionId);
+                Console.WriteLine("CheapMission: " + item.CheapMission);
             }
             Console.ReadKey();
         }
         static void Main(string[] args)
         {
             rest = new RestService("http://localhost:43006/", "league");
-            var leagueSubMenu = new ConsoleMenu(args, level: 1)
-                .Add("List", () => List("League"))
-                .Add("Create", () => Create("League"))
-                .Add("Delete", () => Delete("League"))
-                .Add("Update", () => Update("League"))
-                .Add("Youth Squad Info", () => YouthSquadInfo("League"))
+            var spaceshipSub = new ConsoleMenu(args, level: 1)
+                .Add("List", () => List("Spaceship"))
+                .Add("Create", () => Create("Spaceship"))
+                .Add("Delete", () => Delete("Spaceship"))
+                .Add("Update", () => Update("Spaceship"))
+                .Add("Cheap Squad Info", () => YouthSquadInfo("Mission"))
                 .Add("Exit", ConsoleMenu.Close);
 
-            var teamSubMenu = new ConsoleMenu(args, level: 1)
-                .Add("List", () => List("Team"))
-                .Add("Create", () => Create("Team"))
-                .Add("Delete", () => Delete("Team"))
-                .Add("Update", () => Update("Team"))
-                .Add("Average salary", () => AverageSalary("Team"))
+            var missionSub = new ConsoleMenu(args, level: 1)
+                .Add("List", () => List("Mission"))
+                .Add("Create", () => Create("Mission"))
+                .Add("Delete", () => Delete("Mission"))
+                .Add("Update", () => Update("Mission"))
+                .Add("Average age in mission", () => AverageAstonautsAgeInMission("Team"))
                 .Add("Exit", ConsoleMenu.Close);
 
-            var playerSubMenu = new ConsoleMenu(args, level: 1)
-                .Add("List", () => List("Player"))
-                .Add("Create", () => Create("Player"))
+            var astronautSub = new ConsoleMenu(args, level: 1)
+                .Add("List", () => List("Astronaut"))
+                .Add("Create", () => Create("Astronaut"))
                 .Add("Delete", () => Delete("Player"))
                 .Add("Update", () => Update("Player"))
-                .Add("Younger than X", () => YoungerThanX("Player"))
-                .Add("Young players salary info", () => YoungSalary("Player"))
-                .Add("Youngest player age", () => YoungestPlayerAge("Player"))
+                .Add("Younger than X", () => YoungerThanX("Astronaut"))
+                .Add("Number of American astronauts info", () => AmericansCountInf("Astronaut"))
+                .Add("Youngest astronaut age", () => YoungestAstonautAge("Astronaut"))
                 .Add("Exit", ConsoleMenu.Close);
             var menu = new ConsoleMenu(args, level: 0)
-                .Add("Leagues", () => leagueSubMenu.Show())
-                .Add("Teams", () => teamSubMenu.Show())
-                .Add("Players", () => playerSubMenu.Show())
+                .Add("Mission", () => missionSub.Show())
+                .Add("Spaceship", () => spaceshipSub.Show())
+                .Add("Astronaut", () => astronautSub.Show())
                 .Add("Exit", ConsoleMenu.Close);
 
             menu.Show();

@@ -14,6 +14,6 @@ namespace QCYDS9_HFT_2023241.Logic
         void Update(Astronaut item);
         IEnumerable<Astronaut> GetAstronautsYoungerThanX(int x);
         int GetYoungestAstonautAge();
-        int GetYoungsterSalaryInfo();
+        public int GetAmericansCountInfo();
     }
 }

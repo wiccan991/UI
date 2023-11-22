@@ -46,10 +46,10 @@ namespace QCYDS9_HFT_2023241.Logic
                .OrderBy(t => t.Age).First().Age;
         }
 
-        public int GetYoungsterSalaryInfo()
+        public int GetAmericansCountInfo()
         {
             return repo.ReadAll()
-               .Where(t => t.IsMale).Count();
+               .Where(t => t.Country == "USA").Count();
               
         }
 
