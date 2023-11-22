@@ -34,6 +34,25 @@ namespace QCYDS9_HFT_2023241.Logic
             this.repo.Delete(id);
         }
 
+        public IEnumerable<Astronaut> GetAstronautsYoungerThanX(int x)
+        {
+            return repo.ReadAll()
+                .Where(t => t.Age < x);
+        }
+
+        public int GetYoungestAstonautAge()
+        {
+            return repo.ReadAll()
+               .OrderBy(t => t.Age).First().Age;
+        }
+
+        public int GetYoungsterSalaryInfo()
+        {
+            return repo.ReadAll()
+               .Where(t => t.IsMale).Count();
+              
+        }
+
         public Astronaut Read(int id)
         {
             var astronaut = this.repo.Read(id);

@@ -10,9 +10,9 @@ namespace QCYDS9_HFT_2023241.Logic
 {
     public class MissionLogic : IMissionLogic
     {
-        IRepository<Spaceship> spaceshiprepo;
+      
         IRepository<Mission> repo;
-        IRepository<Astronaut> astronautRepo;
+
 
         public MissionLogic(IRepository<Mission> repo)
         {
@@ -47,6 +47,16 @@ namespace QCYDS9_HFT_2023241.Logic
         public void Update(Mission item)
         {
             this.repo.Update(item);
+        }
+        //átlagosan  asztonauta éetkora
+        public double AverageAstonautsAgeInMission(int missionId)
+        {
+            var team = this.repo
+            .ReadAll()
+            .FirstOrDefault(t => t.MissionId == missionId);
+            return team.Astronauts
+            .Select(p => p.Age)
+            .Average();
         }
 
 

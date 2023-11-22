@@ -11,5 +11,7 @@ namespace QCYDS9_HFT_2023241.Logic
         Mission Read(int id);
         IEnumerable<Mission> ReadAll();
         void Update(Mission item);
+
+        public double AverageAstonautsAgeInMission(int missionId);
     }
 }
