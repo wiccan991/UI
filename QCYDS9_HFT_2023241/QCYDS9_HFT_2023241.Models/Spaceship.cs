@@ -42,15 +42,15 @@ namespace QCYDS9_HFT_2023241.Models
         }
 
     }
-    public class YouthSquadInfo
+    public class Crewnfo
     {
-        public YouthSquadInfo()
+        public Crewnfo()
         {
         }
         public int MissionId { get; set; }
         public int CheapMission { get; set; }
 
-        public YouthSquadInfo(int id, int cheapMission)
+        public Crewnfo(int id, int cheapMission)
         {
             MissionId = id;
             CheapMission = cheapMission;

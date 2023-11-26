@@ -49,4 +49,4 @@ namespace QCYDS9_HFT_2023241.Endpoint.Controllers
             }
         }
     }
-}
+

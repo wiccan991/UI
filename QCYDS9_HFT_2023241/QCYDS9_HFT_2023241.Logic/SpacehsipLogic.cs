@@ -57,13 +57,13 @@ namespace QCYDS9_HFT_2023241.Logic
             this.repo.Update(item);
         }
 
-        public IEnumerable<YouthSquadInfo> GetYouthSquadInfo()
+        public IEnumerable<Crewnfo> GetYouthSquadInfo()
         {
 
             return this.repo.ReadAll()
             .SelectMany(t => t.Missions)
             .GroupBy(t => t.MissionId)
-            .Select(g => new YouthSquadInfo()
+            .Select(g => new Crewnfo()
             {
 
                 MissionId = g.Key,
