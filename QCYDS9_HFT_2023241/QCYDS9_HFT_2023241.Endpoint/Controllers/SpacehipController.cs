@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-
+using QCYDS9_HFT_2023241.Logic;
+using QCYDS9_HFT_2023241.Models;
 using System.Collections.Generic;
 
 namespace QCYDS9_HFT_2023241.Endpoint.Controllers
@@ -12,31 +13,31 @@ namespace QCYDS9_HFT_2023241.Endpoint.Controllers
 
             ISpacehsipLogic logic;
 
-            public SpacehipController(ISpacehip logic)
+            public SpacehipController(ISpacehsipLogic logic)
             {
                 this.logic = logic;
             }
 
             [HttpGet]
-            public IEnumerable<League> ReadAll()
+            public IEnumerable<Spaceship> ReadAll()
             {
                 return this.logic.ReadAll();
             }
 
             [HttpGet("{id}")]
-            public League Read(int id)
+            public Spaceship Read(int id)
             {
                 return this.logic.Read(id);
             }
 
             [HttpPost]
-            public void Create([FromBody] League value)
+            public void Create([FromBody] Spaceship value)
             {
                 this.logic.Create(value);
             }
 
             [HttpPut]
-            public void Update([FromBody] League value)
+            public void Update([FromBody] Spaceship value)
             {
                 this.logic.Update(value);
             }
