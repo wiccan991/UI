@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace WebApplication1
+namespace QCYDS9_HFT_2023241.Endpoint
 {
     public class Program
     {

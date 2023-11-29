@@ -25,7 +25,7 @@ namespace QCYDS9_HFT_2023241.Models
         [NotMapped]
         [JsonIgnore]
         public virtual IEnumerable<Astronaut> Astronauts { get; set; }
-        [JsonIgnore]
+        [NotMapped]
         public virtual Spaceship Spaceship { get; set; }
 
         public Mission()

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace WebApplication1.Controllers
+namespace QCYDS9_HFT_2023241.Endpoint.Controllers
 {
     [Route("[controller]")]
     [ApiController]
