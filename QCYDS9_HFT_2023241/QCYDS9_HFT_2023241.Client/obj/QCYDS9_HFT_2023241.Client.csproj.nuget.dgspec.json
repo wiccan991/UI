@@ -56,7 +56,7 @@
           "dependencies": {
             "ConsoleMenu-simple": {
               "target": "Package",
-              "version": "[2.6.0, )"
+              "version": "[2.6.1, )"
             },
             "Microsoft.AspNet.WebApi.Client": {
               "target": "Package",
