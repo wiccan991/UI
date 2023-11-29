@@ -5,16 +5,16 @@ using System.Collections.Generic;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace QCYDS9_HFT_2023241.Endpoint.Controllers
+namespace WebApplication1.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
-    public class AstonautController : ControllerBase
+    public class AstroautCont : ControllerBase
     {
 
         IAstronautLogic alogic;
 
-        public AstonautController(IAstronautLogic alogic)
+        public AstroautCont(IAstronautLogic alogic)
         {
             this.alogic = alogic;
         }
@@ -42,7 +42,7 @@ namespace QCYDS9_HFT_2023241.Endpoint.Controllers
 
         // PUT api/<AstonautController>/5
         [HttpPut]
-        public void Update( [FromBody] Astronaut value)
+        public void Update([FromBody] Astronaut value)
         {
             this.alogic.Update(value);
         }

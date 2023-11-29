@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace QCYDS9_HFT_2023241.Models
 {
@@ -22,7 +23,9 @@ namespace QCYDS9_HFT_2023241.Models
         public int LaunchYear { get; set; }
 
         [NotMapped]
+        [JsonIgnore]
         public virtual IEnumerable<Astronaut> Astronauts { get; set; }
+        [JsonIgnore]
         public virtual Spaceship Spaceship { get; set; }
 
         public Mission()

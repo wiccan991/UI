@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Net.Mime.MediaTypeNames;
+using System.Text.Json.Serialization;
 
 namespace QCYDS9_HFT_2023241.Models
 {
@@ -23,7 +24,7 @@ namespace QCYDS9_HFT_2023241.Models
         public string Country { get; set; }
         public int Age { get; set; }
         public bool IsMale { get; set; }
-
+        [JsonIgnore]
         [NotMapped]
         public virtual Mission Mission { get; set; }
         public Astronaut()

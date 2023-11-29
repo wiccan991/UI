@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.Json.Serialization;
 
 namespace QCYDS9_HFT_2023241.Models
 {
@@ -21,7 +22,7 @@ namespace QCYDS9_HFT_2023241.Models
         public int Speed { get; set; }
 
         public int MakeYear { get; set; }
-
+        [JsonIgnore]
         public virtual IEnumerable<Mission> Missions { get; set; }
         public Spaceship()
         {
