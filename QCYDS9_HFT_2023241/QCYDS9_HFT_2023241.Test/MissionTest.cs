@@ -37,5 +37,6 @@ namespace QCYDS9_HFT_2023241.Test
             misslo.Create(miss);
             mockMissionRepository.Verify(a => a.Create(miss), Times.Once());
         }
+        
     }
 }

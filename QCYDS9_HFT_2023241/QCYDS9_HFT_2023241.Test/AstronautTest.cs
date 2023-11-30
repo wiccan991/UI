@@ -24,7 +24,7 @@ namespace QCYDS9_HFT_2023241.Test
         [Test]
         public void CreateTest()
         {
-            var astro = new Astronaut(1,3,"Bruce Wayne","USA",35,true);
+            var astro = new Astronaut(1, 3, "Bruce Wayne", "USA", 35, true);
             astrolo.Create(astro);
             mockAstronautRepository.Verify(a => a.Create(astro), Times.Once());
         }
@@ -39,6 +39,29 @@ namespace QCYDS9_HFT_2023241.Test
             }.AsQueryable());
             astrolo = new AstronautLogic(mockAstronautRepository.Object);
             Assert.AreEqual(astrolo.GetYoungestAstonautAge(), 27);
+        }
+        [Test]
+        public void GetAmericansCountInfo() {
+            mockAstronautRepository.Setup(t => t.ReadAll()).Returns(new List<Astronaut>()
+            {
+                new Astronaut(1,2,"Bruce Wayne","USA",35,true),
+                new Astronaut(2,1,"Clark Kent","Krypton",36,true),
+                new Astronaut(3,3,"Hal Jordan","USA",27,true)
+            }.AsQueryable());
+            astrolo = new AstronautLogic(mockAstronautRepository.Object);
+            Assert.That(astrolo.GetAmericansCountInfo() == 2);
+        }
+        [Test]
+        public void GetAstronautsYoungerThanX(){
+            mockAstronautRepository.Setup(t => t.ReadAll()).Returns(new List<Astronaut>()
+            {
+                new Astronaut(1,2,"Bruce Wayne","USA",35,true),
+                new Astronaut(2,1,"Clark Kent","Krypton",36,true),
+                new Astronaut(3,3,"Hal Jordan","USA",27,true)
+            }.AsQueryable());
+            astrolo = new AstronautLogic(mockAstronautRepository.Object);
+            Assert.That(astrolo.GetAmericansCountInfo() != null);
+
         }
     }
 

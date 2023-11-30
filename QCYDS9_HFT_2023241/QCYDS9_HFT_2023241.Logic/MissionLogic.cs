@@ -59,11 +59,11 @@ namespace QCYDS9_HFT_2023241.Logic
         public IEnumerable<Mission> GetWomenInMission()
         {
 
-            var artistsByGenre = this.repo.ReadAll()
+            var a = this.repo.ReadAll()
                 .Where(a => a.Astronauts.Any(s => !s.IsMale))
                 .ToList();
 
-            return artistsByGenre;
+            return a;
         }
 
         //átlagosan  asztonauta életkora
