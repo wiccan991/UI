@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace QCYDS9_HFT_2023241.Client
 {
-     class RestService
+    class RestService
     {
         HttpClient client;
 
