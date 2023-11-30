@@ -13,5 +13,6 @@ namespace QCYDS9_HFT_2023241.Logic
         void Update(Mission item);
 
         public double AverageAstonautsAgeInMission(int missionId);
+        public IEnumerable<Mission> GetWomenInMission();
     }
 }

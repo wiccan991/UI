@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "HfJWXISGB554tPoK6OB8M0JRTQ4an53UFDXR1k/mS3GkYWVG0J/hUY052oiw1JWbE4bJZ1nxDWI3lbKGoJaNSw==",
-  "success": false,
+  "dgSpecHash": "pkKXMnu9IRgNe0Tje8ng+gGnVWu1AcYX7MO8ZT7HwwcUV+mRvHDpq3dim3CKJJOAH80Sa3xEcuNkrNmnM/T5HQ==",
+  "success": true,
   "projectFilePath": "C:\\Users\\user\\Desktop\\egyetem\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Endpoint\\QCYDS9_HFT_2023241.Endpoint.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
@@ -114,15 +114,5 @@
     "C:\\Users\\user\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Unable to find project 'C:\\Users\\user\\Desktop\\egyetem\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Models\\QCYDS9_HFT_2023241.Logic.csproj'. Check that the project reference is valid and that the project file exists.",
-      "libraryId": "C:\\Users\\user\\Desktop\\egyetem\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Models\\QCYDS9_HFT_2023241.Logic.csproj",
-      "targetGraphs": [
-        "net5.0"
-      ]
-    }
-  ]
+  "logs": []
 }

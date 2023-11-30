@@ -6251,7 +6251,6 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "C:\\Users\\user\\Desktop\\egyetem\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Models\\QCYDS9_HFT_2023241.Logic.csproj",
       "QCYDS9_HFT_2023241.Logic >= 1.0.0",
       "QCYDS9_HFT_2023241.Models >= 1.0.0",
       "QCYDS9_HFT_2023241.Repository >= 1.0.0",
@@ -6292,9 +6291,6 @@
           "projectReferences": {
             "C:\\Users\\user\\Desktop\\egyetem\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Logic\\QCYDS9_HFT_2023241.Logic.csproj": {
               "projectPath": "C:\\Users\\user\\Desktop\\egyetem\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Logic\\QCYDS9_HFT_2023241.Logic.csproj"
-            },
-            "C:\\Users\\user\\Desktop\\egyetem\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Models\\QCYDS9_HFT_2023241.Logic.csproj": {
-              "projectPath": "C:\\Users\\user\\Desktop\\egyetem\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Models\\QCYDS9_HFT_2023241.Logic.csproj"
             },
             "C:\\Users\\user\\Desktop\\egyetem\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Models\\QCYDS9_HFT_2023241.Models.csproj": {
               "projectPath": "C:\\Users\\user\\Desktop\\egyetem\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Models\\QCYDS9_HFT_2023241.Models.csproj"
@@ -6342,16 +6338,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Unable to find project 'C:\\Users\\user\\Desktop\\egyetem\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Models\\QCYDS9_HFT_2023241.Logic.csproj'. Check that the project reference is valid and that the project file exists.",
-      "libraryId": "C:\\Users\\user\\Desktop\\egyetem\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Models\\QCYDS9_HFT_2023241.Logic.csproj",
-      "targetGraphs": [
-        "net5.0"
-      ]
-    }
-  ]
+  }
 }

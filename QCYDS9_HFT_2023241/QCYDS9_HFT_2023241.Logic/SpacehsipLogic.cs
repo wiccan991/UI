@@ -57,7 +57,9 @@ namespace QCYDS9_HFT_2023241.Logic
             this.repo.Update(item);
         }
 
-        public IEnumerable<Crewnfo> GetYouthSquadInfo()
+        
+
+        public IEnumerable<Crewnfo> CrewInfo()
         {
 
             return this.repo.ReadAll()
@@ -67,7 +69,9 @@ namespace QCYDS9_HFT_2023241.Logic
             {
 
                 MissionId = g.Key,
-                CheapMission = g.Sum(t=>t.BudgetMDollar)
+
+                SpacehshipName = repo.Read(g.Key).Name,
+                MillioUSD = g.Sum(t=>t.BudgetMDollar)
             }); ;
 
         }

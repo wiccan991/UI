@@ -2,19 +2,20 @@
 using QCYDS9_HFT_2023241.Logic;
 using QCYDS9_HFT_2023241.Models;
 using System.Collections.Generic;
+using System.Numerics;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace QCYDS9_HFT_2023241.Endpoint.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
-    public class AstonautController : ControllerBase
+    public class AstroautCont : ControllerBase
     {
 
         IAstronautLogic alogic;
 
-        public AstonautController(IAstronautLogic alogic)
+        public AstroautCont(IAstronautLogic alogic)
         {
             this.alogic = alogic;
         }
@@ -42,7 +43,7 @@ namespace QCYDS9_HFT_2023241.Endpoint.Controllers
 
         // PUT api/<AstonautController>/5
         [HttpPut]
-        public void Update( [FromBody] Astronaut value)
+        public void Update([FromBody] Astronaut value)
         {
             this.alogic.Update(value);
         }
@@ -53,5 +54,6 @@ namespace QCYDS9_HFT_2023241.Endpoint.Controllers
         {
             this.alogic.Delete(id);
         }
+
     }
 }

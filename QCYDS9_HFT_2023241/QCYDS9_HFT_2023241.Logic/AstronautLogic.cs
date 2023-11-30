@@ -39,7 +39,7 @@ namespace QCYDS9_HFT_2023241.Logic
             return repo.ReadAll()
                 .Where(t => t.Age < x);
         }
-
+        
         public int GetYoungestAstonautAge()
         {
             return repo.ReadAll()

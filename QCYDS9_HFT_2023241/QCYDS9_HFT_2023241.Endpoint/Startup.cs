@@ -12,7 +12,6 @@ using QCYDS9_HFT_2023241.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Numerics;
 using System.Threading.Tasks;
 
 namespace QCYDS9_HFT_2023241.Endpoint
@@ -29,7 +28,6 @@ namespace QCYDS9_HFT_2023241.Endpoint
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
             services.AddTransient<SpaceMissionContext>();
 
             services.AddTransient<IRepository<Astronaut>, AstronautRepository>();
@@ -39,6 +37,7 @@ namespace QCYDS9_HFT_2023241.Endpoint
             services.AddTransient<IAstronautLogic, AstronautLogic>();
             services.AddTransient<IMissionLogic, MissionLogic>();
             services.AddTransient<ISpacehsipLogic, SpacehsipLogic>();
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

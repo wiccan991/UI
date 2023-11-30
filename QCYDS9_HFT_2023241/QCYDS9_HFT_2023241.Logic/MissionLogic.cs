@@ -55,7 +55,18 @@ namespace QCYDS9_HFT_2023241.Logic
         {
             this.repo.Update(item);
         }
-        //átlagosan  asztonauta éetkora
+        //Küldetések, amiben nők is részt vettek
+        public IEnumerable<Mission> GetWomenInMission()
+        {
+
+            var artistsByGenre = this.repo.ReadAll()
+                .Where(a => a.Astronauts.Any(s => !s.IsMale))
+                .ToList();
+
+            return artistsByGenre;
+        }
+
+        //átlagosan  asztonauta életkora
         public double AverageAstonautsAgeInMission(int missionId)
         {
             var team = this.repo

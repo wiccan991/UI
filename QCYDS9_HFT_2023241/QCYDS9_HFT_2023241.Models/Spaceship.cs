@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Text.Json.Serialization;
+using System.Net.Cache;
 
 namespace QCYDS9_HFT_2023241.Models
 {
@@ -36,6 +37,7 @@ namespace QCYDS9_HFT_2023241.Models
             Speed = speed;
             MakeYear = makeYear;
         }
+        
 
         public override string ToString()
         {
@@ -48,13 +50,18 @@ namespace QCYDS9_HFT_2023241.Models
         public Crewnfo()
         {
         }
-        public int MissionId { get; set; }
-        public int CheapMission { get; set; }
 
-        public Crewnfo(int id, int cheapMission)
+        public Crewnfo(int missionId, int millioUSD, string name)
         {
-            MissionId = id;
-            CheapMission = cheapMission;
+            MissionId = missionId;
+            MillioUSD = millioUSD;
+            SpacehshipName = name;
         }
+
+        public int MissionId { get; set; }
+        public int MillioUSD { get; set; }
+        public string SpacehshipName { get; set; }
+
+        
     }
 }
