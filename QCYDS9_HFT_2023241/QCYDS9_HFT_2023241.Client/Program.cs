@@ -22,7 +22,7 @@ namespace QCYDS9_HFT_2023241.Client
                 .Add("Create", () => Create("Spaceship"))
                 .Add("Delete", () => Delete("Spaceship"))
                 .Add("Update", () => Update("Spaceship"))
-                .Add("Crew Info", () => CrewInfo("Spaceship"))
+             
                 .Add("Exit", ConsoleMenu.Close);
 
             var missionSub = new ConsoleMenu(args, level: 1)
@@ -30,7 +30,7 @@ namespace QCYDS9_HFT_2023241.Client
                 .Add("Create", () => Create("Mission"))
                 .Add("Delete", () => Delete("Mission"))
                 .Add("Update", () => Update("Mission"))
-                .Add("Average age in mission", () => AverageAstonautsAgeInMission("Mission"))
+     
                 .Add("Exit", ConsoleMenu.Close);
 
             var astronautSub = new ConsoleMenu(args, level: 1)
@@ -38,14 +38,29 @@ namespace QCYDS9_HFT_2023241.Client
                 .Add("Create", () => Create("Astronaut"))
                 .Add("Delete", () => Delete("Astronaut"))
                 .Add("Update", () => Update("Astronaut"))
-                .Add("Younger than X", () => YoungerThanX("Astronaut"))
-                .Add("Number of American astronauts info", () => AmericansCountInf("Astronaut"))
-                .Add("Youngest astronaut age", () => YoungestAstonautAge("Astronaut"))
+    
+       
                 .Add("Exit", ConsoleMenu.Close);
+
+            var extra = new ConsoleMenu(args, level: 1)
+                .Add("Get Spaceships By Astronaut Country", () => GetSpaceshipsByAstronautCountry("Extra Info [nonCRUD]"))
+                .Add("Crew Info", () => CrewInfo("Extra Info [nonCRUD]"))
+                .Add("List all astronauts for a given mission", () => GetAstronautsByMissionId("Extra Info [nonCRUD]"))
+                .Add("Which mission did women participate in.", () => GetWomenInMission("Extra Info [nonCRUD]"))
+                .Add("Average age in mission", () => AverageAstonautsAgeInMission("Extra Info [nonCRUD]"))
+                .Add("Younger than X", () => YoungerThanX("Extra Info [nonCRUD]"))
+                .Add("Number of American astronauts info", () => AmericansCountInf("Extra Info [nonCRUD]"))
+                
+                .Add("Youngest astronaut age", () => YoungestAstonautAge("Extra Info [nonCRUD]"))
+                .Add("Exit", ConsoleMenu.Close);
+
+
+
             var menu = new ConsoleMenu(args, level: 0)
                .Add("Mission", () => missionSub.Show())
                .Add("Spaceship", () => spaceshipSub.Show())
                .Add("Astronaut", () => astronautSub.Show())
+               .Add("Extra Info [nonCRUD]", () => extra.Show())
                .Add("Exit", ConsoleMenu.Close);
 
             menu.Show();
@@ -71,7 +86,7 @@ namespace QCYDS9_HFT_2023241.Client
                 Console.Write("Spaceship make year: ");
                 int makeyear = int.Parse(Console.ReadLine());
 
-                rest.Post(new Spaceship() { Name = name, MakeYear = makeyear, Speed = speed }, "Spaceship");
+                rest.Post(new Spaceship() { Name = name, MakeYear = makeyear, Speed = speed }, "spaceship");
 
             }
             else if (entity == "Astronaut")
@@ -86,7 +101,7 @@ namespace QCYDS9_HFT_2023241.Client
                 bool male = bool.Parse(Console.ReadLine());
                 Console.Write("Astronaut mission ID: ");
                 int id = int.Parse(Console.ReadLine());
-                rest.Post(new Astronaut() { Name = name, Age = age, Country = country, IsMale = male, AstronautId = id }, "Astronaut");
+                rest.Post(new Astronaut() { Name = name, Age = age, Country = country, IsMale = male, AstronautId = id }, "astronaut");
             }
             else if (entity == "Mission")
             {
@@ -109,7 +124,7 @@ namespace QCYDS9_HFT_2023241.Client
         {
             if (entity == "Spaceship")
             {
-                List<Spaceship> spaceship = rest.Get<Spaceship>("Spaceship");
+                List<Spaceship> spaceship = rest.Get<Spaceship>("spaceship");
                 foreach (var item in spaceship)
                 {
                     Console.WriteLine("(" + item.Id + ")" + item.Name);
@@ -117,7 +132,7 @@ namespace QCYDS9_HFT_2023241.Client
             }
             else if (entity == "Astronaut")
             {
-                List<Astronaut> astro = rest.Get<Astronaut>("Astronaut");
+                List<Astronaut> astro = rest.Get<Astronaut>("astronaut");
                 foreach (var item in astro)
                 {
                     Console.WriteLine("(" + item.AstronautId + ")" + item.Name);
@@ -125,7 +140,7 @@ namespace QCYDS9_HFT_2023241.Client
             }
             else if (entity == "Mission")
             {
-                List<Mission> mission = rest.Get<Mission>("Mission");
+                List<Mission> mission = rest.Get<Mission>("mission");
                 foreach (var item in mission)
                 {
                     Console.WriteLine("(" + item.MissionId + ")" + item.Name);
@@ -150,21 +165,21 @@ namespace QCYDS9_HFT_2023241.Client
             {
                 Console.WriteLine("Astronaut ID to modify: ");
                 int id = int.Parse(Console.ReadLine());
-                Astronaut a = rest.Get<Astronaut>(id, "Astronaut");
+                Astronaut a = rest.Get<Astronaut>(id, "astronaut");
                 Console.WriteLine($"Old name:{a.Name} new name: ");
                 string newName = Console.ReadLine();
                 a.Name = newName;
-                rest.Put(a, "Astronaut");
+                rest.Put(a, "astronaut");
             }
             else if (entity == "Mission")
             {
                 Console.WriteLine("Mission ID to modify: ");
                 int id = int.Parse(Console.ReadLine());
-                Mission m = rest.Get<Mission>(id, "Mission");
+                Mission m = rest.Get<Mission>(id, "mission");
                 Console.WriteLine($"Old name:{m.Name} new name: ");
                 string newName = Console.ReadLine();
                 m.Name = newName;
-                rest.Put(m, "Mission");
+                rest.Put(m, "mission");
             }
         }
         static void Delete(string entity)
@@ -173,41 +188,66 @@ namespace QCYDS9_HFT_2023241.Client
             {
                 Console.WriteLine("Mission ID to delete: ");
                 int id = int.Parse(Console.ReadLine());
-                rest.Delete(id, "Mission");
+                rest.Delete(id, "mission");
             }
             else if (entity == "Astronaut")
             {
                 Console.WriteLine("Astronaut ID to delete: ");
                 int id = int.Parse(Console.ReadLine());
-                rest.Delete(id, "Astronaut");
+                rest.Delete(id, "astronaut");
             }
             else if (entity == "Spaceship")
             {
                 Console.WriteLine("Spaceship ID to delete: ");
                 int id = int.Parse(Console.ReadLine());
-                rest.Delete(id, "Spaceship");
+                rest.Delete(id, "spaceship");
             }
         }
         static void YoungerThanX(string entity)
         {
             Console.WriteLine("Astronaut under age: ");
             int age = int.Parse(Console.ReadLine());
-            IEnumerable<Astronaut> youngastronauts = rest.Get<Astronaut>("ExtraInfoCont/GetAstronautsYoungerThanX" + age);
+            IEnumerable<Astronaut> youngastronauts = rest.Get<Astronaut>("ExtraInfo/GetAstronautsYoungerThanX/" + age);
             foreach (var item in youngastronauts)
             {
                 Console.WriteLine(item.Name);
             }
             Console.ReadLine();
         }
+        static void GetSpaceshipsByAstronautCountry(string entity)
+        {
+            Console.WriteLine("Spaceships by astronaut country ");
+            Console.WriteLine("Country: ");
+            string db = Console.ReadLine();
+            IEnumerable<Spaceship> country = rest.Get<Spaceship>("ExtraInfo/GetSpaceshipsByAstronautCountry/" + db);
+            foreach (var item in country)
+            {
+                Console.WriteLine("Spacehships's name: " + item.Name);
+            }
+            Console.ReadLine();
+        } 
+        static void GetAstronautsByMissionId(string entity)
+        {
+            Console.WriteLine("List all astronauts for a given mission");
+            Console.WriteLine("Mission ID: ");
+            string a = Console.ReadLine();
+            IEnumerable<Astronaut> b = rest.Get<Astronaut>("ExtraInfo/GetAstronautsByMissionId/" + a);
+            foreach (var item in b)
+            {
+                Console.WriteLine("Astronaut's name: " + item.Name);
+                Console.WriteLine("Astronaut's country: " + item.Country);
+            }
+            Console.ReadLine();
+        }
         static void AmericansCountInf(string entity)
         {
-            int x = rest.GetSingle<int>("ExtraInfoCont/GetAmericansCountInfo");
+            int x = rest.GetSingle<int>("ExtraInfo/GetAmericansCountInfo/");
             Console.WriteLine("Number of American astronauts: " + x);
             Console.ReadLine();
         }
         static void YoungestAstonautAge(string entity)
         {
-            int x = rest.GetSingle<int>("ExtraInfoCont/GetWomenInMission");
+            int x = rest.GetSingle<int>("ExtraInfo/GetWomenInMission/");
             Console.WriteLine("The youngest astronauts age is: " + x);
             Console.ReadLine();
         }
@@ -215,9 +255,19 @@ namespace QCYDS9_HFT_2023241.Client
         {
             Console.WriteLine("Mission ID: ");
             int id = int.Parse(Console.ReadLine());
-            double x = rest.GetSingle<double>("ExtraInfoCont/AverageAstonautsAgeInMission/" + id);
+            double x = rest.GetSingle<double>("ExtraInfo/AverageAstonautsAgeInMission/" + id);
             Console.WriteLine(x);
             Console.ReadKey();
+
+        }
+
+        static void GetWomenInMission(string entity) {
+            IEnumerable<Mission> women = rest.Get<Mission>("ExtraInfo/GetWomenInMission/");
+            foreach (var item in women)
+            {
+                Console.WriteLine("Mission's name: "+item.Name);
+            }
+            Console.ReadLine();
         }
         static void CrewInfo(string entity)
         {

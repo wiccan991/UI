@@ -10,6 +10,7 @@ namespace QCYDS9_HFT_2023241.Logic
         void Create(Astronaut item);
         void Delete(int id);
         Astronaut Read(int id);
+        IEnumerable<Astronaut> GetAstronautsByMissionId(int missionId);
         IEnumerable<Astronaut> ReadAll();
         void Update(Astronaut item);
         IEnumerable<Astronaut> GetAstronautsYoungerThanX(int x);

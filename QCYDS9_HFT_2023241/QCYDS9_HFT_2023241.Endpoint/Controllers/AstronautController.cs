@@ -19,7 +19,7 @@ namespace QCYDS9_HFT_2023241.Endpoint.Controllers
         {
             this.alogic = alogic;
         }
-
+        
         // GET: api/<AstonautController>
         [HttpGet]
         public IEnumerable<Astronaut> ReadAll()

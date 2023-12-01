@@ -66,7 +66,7 @@ namespace QCYDS9_HFT_2023241.Client
             else
             {
                 var error = response.Content.ReadAsAsync<RestExceptionInfo>().GetAwaiter().GetResult();
-                throw new ArgumentException(error.Msg);
+                throw new ArgumentException("No such data in the database.");
             }
             return items;
         }

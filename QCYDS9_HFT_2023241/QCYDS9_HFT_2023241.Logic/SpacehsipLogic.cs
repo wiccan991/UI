@@ -1,4 +1,5 @@
-﻿using QCYDS9_HFT_2023241.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using QCYDS9_HFT_2023241.Models;
 using QCYDS9_HFT_2023241.Repository;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,13 @@ namespace QCYDS9_HFT_2023241.Logic
         {
             this.repo = repo;
             
+        }
+
+        public IEnumerable<Spaceship> GetSpaceshipsByAstronautCountry(string astronautCountry)
+        {
+            return this.repo.ReadAll()
+                .Where(s => s.Missions.Any(m => m.Astronauts.Any(a => a.Country == astronautCountry))).ToList();
+                
         }
 
 

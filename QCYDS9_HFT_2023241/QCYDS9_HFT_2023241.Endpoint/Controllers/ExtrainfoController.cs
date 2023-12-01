@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 using QCYDS9_HFT_2023241.Logic;
 using QCYDS9_HFT_2023241.Models;
 using System.Collections.Generic;
@@ -28,8 +29,20 @@ namespace QCYDS9_HFT_2023241.Endpoint.Controllers
         {
             return this.alog.GetAstronautsYoungerThanX(age);
         }
-        
-        
+        [HttpGet("{astronautCountry}")]
+        public IEnumerable<Spaceship> GetSpaceshipsByAstronautCountry(string astronautCountry) 
+        {
+            return this.slog.GetSpaceshipsByAstronautCountry(astronautCountry);
+        }
+
+        [HttpGet("{missionId}")]
+       public IEnumerable<Astronaut> GetAstronautsByMissionId(int missionId)
+        { 
+            return this.alog.GetAstronautsByMissionId(missionId); 
+        }
+
+
+
         [HttpGet]
         public int GetAmericansCountInfo()
         {

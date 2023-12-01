@@ -1,4 +1,5 @@
-﻿using QCYDS9_HFT_2023241.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using QCYDS9_HFT_2023241.Models;
 using QCYDS9_HFT_2023241.Repository;
 using System;
 using System.Collections.Generic;
@@ -27,6 +28,11 @@ namespace QCYDS9_HFT_2023241.Logic
             }
             else { this.repo.Create(item); }
            
+        }
+
+        public IEnumerable<Astronaut> GetAstronautsByMissionId(int missionId)
+        {
+            return this.repo.ReadAll().Where(a => a.MissionId == missionId).ToList();
         }
 
         public void Delete(int id)
@@ -58,7 +64,7 @@ namespace QCYDS9_HFT_2023241.Logic
             var astronaut = this.repo.Read(id);
             if (astronaut == null)
             {
-                throw new ArgumentException("Astonaut nit exists.");
+                throw new ArgumentException("Astonaut not exists.");
             }
             return this.repo.Read(id);
         }
