@@ -50,7 +50,6 @@ namespace QCYDS9_HFT_2023241.Client
                 .Add("Average age in mission", () => AverageAstonautsAgeInMission("Extra Info [nonCRUD]"))
                 .Add("Younger than X", () => YoungerThanX("Extra Info [nonCRUD]"))
                 .Add("Number of American astronauts info", () => AmericansCountInf("Extra Info [nonCRUD]"))
-                
                 .Add("Youngest astronaut age", () => YoungestAstonautAge("Extra Info [nonCRUD]"))
                 .Add("Exit", ConsoleMenu.Close);
 
@@ -65,7 +64,7 @@ namespace QCYDS9_HFT_2023241.Client
 
             menu.Show();
 
-            //Console.WriteLine("Hello World!");
+           //Console.WriteLine("Hello World!");
             //        //IRepository<Astronaut> repo = new AstronautRepository(new SpaceMissionContext());
             //        //IRepository<Mission> repo2 = new MissonRepository(new SpaceMissionContext());
 
