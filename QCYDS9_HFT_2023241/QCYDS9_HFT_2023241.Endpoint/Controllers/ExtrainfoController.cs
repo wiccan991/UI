@@ -10,13 +10,13 @@ namespace QCYDS9_HFT_2023241.Endpoint.Controllers
     [Route("[controller]/[action]")]
     [ApiController]
 
-    public class ExtraInfoCont : ControllerBase
+    public class ExtrainfoController : ControllerBase
     {
         IAstronautLogic alog;
         IMissionLogic mlog;
         ISpacehsipLogic slog;
 
-        public ExtraInfoCont(IAstronautLogic alog, IMissionLogic mlog, ISpacehsipLogic slog)
+        public ExtrainfoController(IAstronautLogic alog, IMissionLogic mlog, ISpacehsipLogic slog)
         {
             this.alog = alog;
             this.mlog = mlog;

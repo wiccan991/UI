@@ -9,11 +9,11 @@ namespace QCYDS9_HFT_2023241.Endpoint.Controllers
 {
     [Route("[controller]")]
     [ApiController]
-    public class SpaceshipCont : ControllerBase
+    public class SpaceShipController : ControllerBase
     {
         ISpacehsipLogic slogic;
 
-        public SpaceshipCont(ISpacehsipLogic slogic)
+        public SpaceShipController(ISpacehsipLogic slogic)
         {
             this.slogic = slogic;
         }

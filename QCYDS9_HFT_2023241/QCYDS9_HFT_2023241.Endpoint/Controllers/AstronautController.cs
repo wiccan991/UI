@@ -10,12 +10,12 @@ namespace QCYDS9_HFT_2023241.Endpoint.Controllers
 {
     [Route("[controller]")]
     [ApiController]
-    public class AstroautCont : ControllerBase
+    public class AstronautController : ControllerBase
     {
 
         IAstronautLogic alogic;
 
-        public AstroautCont(IAstronautLogic alogic)
+        public AstronautController(IAstronautLogic alogic)
         {
             this.alogic = alogic;
         }

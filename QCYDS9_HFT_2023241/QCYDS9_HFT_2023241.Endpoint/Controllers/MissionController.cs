@@ -11,12 +11,12 @@ namespace QCYDS9_HFT_2023241.Endpoint.Controllers
 
     [Route("[controller]")]
     [ApiController]
-    public class MissionCont : ControllerBase
+    public class MissionController : ControllerBase
     {
 
         IMissionLogic mlogic;
 
-        public MissionCont(IMissionLogic mlogic)
+        public MissionController(IMissionLogic mlogic)
         {
             this.mlogic = mlogic;
         }

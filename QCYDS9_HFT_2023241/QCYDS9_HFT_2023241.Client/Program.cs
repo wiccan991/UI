@@ -16,7 +16,7 @@ namespace QCYDS9_HFT_2023241.Client
 
         static void Main(string[] args)
         {
-            rest = new RestService("http://localhost:25601/", "spaceship");
+            rest = new RestService("http://localhost:25601/", "SpaceShip");
             var spaceshipSub = new ConsoleMenu(args, level: 1)
                 .Add("List", () => List("Spaceship"))
                 .Add("Create", () => Create("Spaceship"))
@@ -192,7 +192,7 @@ namespace QCYDS9_HFT_2023241.Client
         {
             Console.WriteLine("Astronaut under age: ");
             int age = int.Parse(Console.ReadLine());
-            IEnumerable<Astronaut> youngastronauts = rest.Get<Astronaut>("PlusInfo/GetAstronautsYoungerThanX/" + age);
+            IEnumerable<Astronaut> youngastronauts = rest.Get<Astronaut>("ExtraInfoCont/GetAstronautsYoungerThanX" + age);
             foreach (var item in youngastronauts)
             {
                 Console.WriteLine(item.Name);
@@ -201,13 +201,13 @@ namespace QCYDS9_HFT_2023241.Client
         }
         static void AmericansCountInf(string entity)
         {
-            int x = rest.GetSingle<int>("PlusInfo/GetAmericansCountInf");
+            int x = rest.GetSingle<int>("ExtraInfoCont/GetAmericansCountInfo");
             Console.WriteLine("Number of American astronauts: " + x);
             Console.ReadLine();
         }
         static void YoungestAstonautAge(string entity)
         {
-            int x = rest.GetSingle<int>("PlusInfo/GetYoungestAstonautAge");
+            int x = rest.GetSingle<int>("ExtraInfoCont/GetWomenInMission");
             Console.WriteLine("The youngest astronauts age is: " + x);
             Console.ReadLine();
         }
@@ -215,13 +215,13 @@ namespace QCYDS9_HFT_2023241.Client
         {
             Console.WriteLine("Mission ID: ");
             int id = int.Parse(Console.ReadLine());
-            double x = rest.GetSingle<double>("PlusInfo/AverageAstonautsAgeInMission/" + id);
+            double x = rest.GetSingle<double>("ExtraInfoCont/AverageAstonautsAgeInMission/" + id);
             Console.WriteLine(x);
             Console.ReadKey();
         }
         static void CrewInfo(string entity)
         {
-            var ysi = rest.Get<Crewnfo>("Crewnfo/GetYSI");
+            var ysi = rest.Get<Crewnfo>("CrewInfo/CrewInfo");
             foreach (var item in ysi)
             {
                 Console.WriteLine("Spaceship ID: " + item.MissionId);
