@@ -14,5 +14,7 @@ namespace QCYDS9_HFT_2023241.Logic
 
         public double AverageAstonautsAgeInMission(int missionId);
         public IEnumerable<Mission> GetWomenInMission();
+        public IEnumerable<Mission> GetMissionsByLaunchYear(int launchYear);
+        public IEnumerable<Mission> GetMissionsBySpaceshipId(int spaceshipId);
     }
 }

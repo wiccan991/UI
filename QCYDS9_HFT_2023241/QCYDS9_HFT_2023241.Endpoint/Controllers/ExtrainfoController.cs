@@ -40,6 +40,16 @@ namespace QCYDS9_HFT_2023241.Endpoint.Controllers
         { 
             return this.alog.GetAstronautsByMissionId(missionId); 
         }
+        [HttpGet("{spaceshipId}")]
+        public IEnumerable<Mission> GetMissionsBySpaceshipId(int spaceshipId)
+        {
+            return this.mlog.GetMissionsBySpaceshipId(spaceshipId);
+        }
+        [HttpGet("{launchYear}")]
+        public IEnumerable<Mission> GetMissionsByLaunchYear(int launchYear)
+        {
+            return this.mlog.GetMissionsByLaunchYear(launchYear);
+        }
 
 
 

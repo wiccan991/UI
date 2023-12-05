@@ -16,6 +16,7 @@ namespace QCYDS9_HFT_2023241.Logic
 
         IEnumerable<Crewnfo> CrewInfo();
         IEnumerable<Spaceship> GetSpaceshipsByAstronautCountry(string astronautCountry);
+   
 
 
     }

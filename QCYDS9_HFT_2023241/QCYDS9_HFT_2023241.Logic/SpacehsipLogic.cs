@@ -20,12 +20,7 @@ namespace QCYDS9_HFT_2023241.Logic
             
         }
 
-        public IEnumerable<Spaceship> GetSpaceshipsByAstronautCountry(string astronautCountry)
-        {
-            return this.repo.ReadAll()
-                .Where(s => s.Missions.Any(m => m.Astronauts.Any(a => a.Country == astronautCountry))).ToList();
-                
-        }
+        
 
 
         public void Create(Spaceship item)
@@ -64,8 +59,14 @@ namespace QCYDS9_HFT_2023241.Logic
         {
             this.repo.Update(item);
         }
+        //Az összes űrhajó listázása egy adott országban részt vevő űrhajósok alapján
+        public IEnumerable<Spaceship> GetSpaceshipsByAstronautCountry(string astronautCountry)
+        {
+            return this.repo.ReadAll()
+                .Where(s => s.Missions.Any(m => m.Astronauts.Any(a => a.Country == astronautCountry)))
+                .ToList();
+        }
 
-        
 
         public IEnumerable<Crewnfo> CrewInfo()
         {

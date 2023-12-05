@@ -1,4 +1,5 @@
-﻿using QCYDS9_HFT_2023241.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using QCYDS9_HFT_2023241.Models;
 using QCYDS9_HFT_2023241.Repository;
 using System;
 using System.Collections.Generic;
@@ -55,6 +56,14 @@ namespace QCYDS9_HFT_2023241.Logic
         {
             this.repo.Update(item);
         }
+
+        //Az összes küldetés listázása egy adott űrhajóhoz
+        public IEnumerable<Mission> GetMissionsBySpaceshipId(int spaceshipId)
+        {
+            return this.repo.ReadAll().
+                Where(m => m.SpaceshipId == spaceshipId).ToList();
+        }
+
         //Küldetések, amiben nők is részt vettek
         public IEnumerable<Mission> GetWomenInMission()
         {
@@ -64,6 +73,15 @@ namespace QCYDS9_HFT_2023241.Logic
                 .ToList();
 
             return a;
+        }
+
+       
+
+        //Az összes küldetés listázása egy adott évszám alapján:
+        public IEnumerable<Mission> GetMissionsByLaunchYear(int launchYear)
+        {
+            return this.repo.ReadAll().
+                Where(m => m.LaunchYear == launchYear).ToList();
         }
 
         //átlagosan  asztonauta életkora

@@ -29,7 +29,7 @@ namespace QCYDS9_HFT_2023241.Logic
             else { this.repo.Create(item); }
            
         }
-
+        //Az összes űrhajós listázása egy adott küldetéshez
         public IEnumerable<Astronaut> GetAstronautsByMissionId(int missionId)
         {
             return this.repo.ReadAll().Where(a => a.MissionId == missionId).ToList();

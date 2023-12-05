@@ -44,8 +44,10 @@ namespace QCYDS9_HFT_2023241.Client
 
             var extra = new ConsoleMenu(args, level: 1)
                 .Add("Get Spaceships By Astronaut Country", () => GetSpaceshipsByAstronautCountry("Extra Info [nonCRUD]"))
+                .Add("Get Missions By SpaceshipId", () => GetMissionsBySpaceshipId("Extra Info [nonCRUD]"))
                 .Add("Crew Info", () => CrewInfo("Extra Info [nonCRUD]"))
                 .Add("List all astronauts for a given mission", () => GetAstronautsByMissionId("Extra Info [nonCRUD]"))
+                .Add("Get Missions By Launch Year", () => GetMissionsByLaunchYear("Extra Info [nonCRUD]"))
                 .Add("Which mission did women participate in.", () => GetWomenInMission("Extra Info [nonCRUD]"))
                 .Add("Average age in mission", () => AverageAstonautsAgeInMission("Extra Info [nonCRUD]"))
                 .Add("Younger than X", () => YoungerThanX("Extra Info [nonCRUD]"))
@@ -225,6 +227,18 @@ namespace QCYDS9_HFT_2023241.Client
             }
             Console.ReadLine();
         } 
+        static void GetMissionsByLaunchYear(string entity)
+        {
+            Console.WriteLine("Get mission by lunch year: ");
+            Console.WriteLine("Year: ");
+            int year = int.Parse(Console.ReadLine());
+            IEnumerable<Mission> m = rest.Get<Mission>("ExtraInfo/GetMissionsByLaunchYear/" + year);
+            foreach (var item in m)
+            {
+                Console.WriteLine("Mission's name: " + item.Name);
+            }
+            Console.ReadLine();
+        } 
         static void GetAstronautsByMissionId(string entity)
         {
             Console.WriteLine("List all astronauts for a given mission");
@@ -237,7 +251,26 @@ namespace QCYDS9_HFT_2023241.Client
                 Console.WriteLine("Astronaut's country: " + item.Country);
             }
             Console.ReadLine();
+
+            
         }
+        static void GetMissionsBySpaceshipId(string entity)
+        {
+            Console.WriteLine("Get Missions By SpaceshipId");
+            Console.WriteLine("Spaceship ID: ");
+            string a = Console.ReadLine();
+            IEnumerable<Mission> b = rest.Get<Mission>("ExtraInfo/GetMissionsBySpaceshipId/" + a);
+            foreach (var item in b)
+            {
+                Console.WriteLine("Mission's name: " + item.Name+ " "+ item.BudgetMDollar+ " mUSD");
+               
+            }
+            Console.ReadLine();
+
+            
+        }
+
+        
         static void AmericansCountInf(string entity)
         {
             int x = rest.GetSingle<int>("ExtraInfo/GetAmericansCountInfo/");
