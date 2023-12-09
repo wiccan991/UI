@@ -1,8 +1,7 @@
 ﻿using ConsoleTools;
-using Humanizer;
-using QCYDS9_HFT_2023241.Logic;
+
 using QCYDS9_HFT_2023241.Models;
-using QCYDS9_HFT_2023241.Repository;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
