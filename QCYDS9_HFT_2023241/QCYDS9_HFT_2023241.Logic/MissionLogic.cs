@@ -42,7 +42,7 @@ namespace QCYDS9_HFT_2023241.Logic
             var mission = this.repo.Read(id);
             if (mission == null)
             {
-                throw new ArgumentException("Mission not exists.");
+                throw new ArgumentException("Astonaut not exists.");
             }
             return this.repo.Read(id);
         }

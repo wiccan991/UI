@@ -1,0 +1,122 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\user\\source\\repos\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\source\\repos\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.JSClient\\wwwroot\\extraScript.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:QCYDS9_HFT_2023241.JSClient\\wwwroot\\extraScript.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\source\\repos\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\qcyds9_hft_2023241.jsclient\\wwwroot\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:qcyds9_hft_2023241.jsclient\\wwwroot\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\source\\repos\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\qcyds9_hft_2023241.jsclient\\wwwroot\\spaceship.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:qcyds9_hft_2023241.jsclient\\wwwroot\\spaceship.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\source\\repos\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\qcyds9_hft_2023241.jsclient\\wwwroot\\extra.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:qcyds9_hft_2023241.jsclient\\wwwroot\\extra.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\source\\repos\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\qcyds9_hft_2023241.jsclient\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:qcyds9_hft_2023241.jsclient\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "script.js",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.JSClient\\wwwroot\\script.js",
+              "RelativeDocumentMoniker": "QCYDS9_HFT_2023241.JSClient\\wwwroot\\script.js",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.JSClient\\wwwroot\\script.js",
+              "RelativeToolTip": "QCYDS9_HFT_2023241.JSClient\\wwwroot\\script.js",
+              "ViewState": "AQIAAGsAAAAAAAAAAAAIwGsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-04-26T22:14:23.028Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "spaceship.html",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.JSClient\\wwwroot\\spaceship.html",
+              "RelativeDocumentMoniker": "QCYDS9_HFT_2023241.JSClient\\wwwroot\\spaceship.html",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.JSClient\\wwwroot\\spaceship.html",
+              "RelativeToolTip": "QCYDS9_HFT_2023241.JSClient\\wwwroot\\spaceship.html",
+              "ViewState": "AQIAABUAAAAAAAAAAAAYwDoAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-04-26T22:15:37.97Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "extra.html",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.JSClient\\wwwroot\\extra.html",
+              "RelativeDocumentMoniker": "QCYDS9_HFT_2023241.JSClient\\wwwroot\\extra.html",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.JSClient\\wwwroot\\extra.html",
+              "RelativeToolTip": "QCYDS9_HFT_2023241.JSClient\\wwwroot\\extra.html",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-04-26T22:14:14.765Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "extraScript.js",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.JSClient\\wwwroot\\extraScript.js",
+              "RelativeDocumentMoniker": "QCYDS9_HFT_2023241.JSClient\\wwwroot\\extraScript.js",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.JSClient\\wwwroot\\extraScript.js",
+              "RelativeToolTip": "QCYDS9_HFT_2023241.JSClient\\wwwroot\\extraScript.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-04-26T22:14:00.574Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.JSClient\\wwwroot\\index.html",
+              "RelativeDocumentMoniker": "QCYDS9_HFT_2023241.JSClient\\wwwroot\\index.html",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.JSClient\\wwwroot\\index.html",
+              "RelativeToolTip": "QCYDS9_HFT_2023241.JSClient\\wwwroot\\index.html",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-04-26T22:16:37.148Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

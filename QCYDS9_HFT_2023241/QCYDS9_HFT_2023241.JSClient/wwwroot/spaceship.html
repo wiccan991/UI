@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+</head>
+<body>
+
+    <h1>Spaceship database</h1>
+
+    <div id="formdiv">
+        <label>Spaceship name</label>
+        <input type="text" id="Spaceshipname" />
+        <label>Spaceship speed</label>
+        <input type="text" id="speed" />
+        <label>Make year</label>
+        <input type="text" id="year" />
+
+        <button type="button" onclick="create1()">Add Spaceship</button>
+    </div>
+
+
+
+    <div id="updateformdiv">
+        <label>Spaceship name</label>
+        <input type="text" id="Spaceshipname1" />
+        <label>Spaceship speed</label>
+        <input type="text" id="speed1" />
+        <label>Make year</label>
+        <input type="text" id="year1" />
+        <button onclick="update()" type="button">Update Asrtonaut</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+              
+                <th>Name</th>
+                <th>Speed</th>
+                <th>Make year</th>
+          
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="resularea">
+        </tbody>
+
+    </table>
+
+    <div id="resultId">
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
+    <script src="spaceshipScript.js"></script>
+</body>
+</html>

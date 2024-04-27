@@ -4,10 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:QCYDS9_HFT_2023241.WPFClient"
-         xmlns:local1="clr-namespace:QCYDS9_HFT_2023241.WPFClient.ViewModels"
+        xmlns:local1="clr-namespace:QCYDS9_HFT_2023241.WPFClient.ViewModels"
         mc:Ignorable="d"
         Title="ExtraInfoWindow" Height="450" Width="800">
-  
+
     <Window.DataContext>
         <local1:ExtraInfoModel/>
     </Window.DataContext>
@@ -15,11 +15,23 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="1*"/>
-
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Column="0">
-        <Button Content="Click me" Command="{Binding YoungestAstonautAgeCommand}" Margin="5" />
-            </StackPanel>
-        <ListBox ItemsSource="{Binding YoungestAstonautAgeNonCrud}" DisplayMemberPath="Age" Margin="5" Grid.Column="1" />
+        <ListBox ItemsSource="{Binding crewinfos}" HorizontalContentAlignment="Stretch" SelectedItem="{Binding Selectedcew}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderThickness="1" BorderBrush="Black" Margin="0,0,0,5">
+                        <StackPanel>
+                            <Label Content="Mission ID: " FontSize="15" FontWeight="Bold"/>
+                            <TextBlock Text="{Binding MissionId}" FontSize="15" Margin="15,0,0,0"/>
+                            <Label Content="MillioUSD: " FontSize="15" FontWeight="Bold"/>
+                            <TextBlock Text="{Binding MillioUSD}" FontSize="15" Margin="15,0,0,0"/>
+                            <Label Content="Spaceship Name: " FontSize="15" FontWeight="Bold"/>
+                            <TextBlock Text="{Binding SpacehshipName}" FontSize="15" Margin="15,0,0,0"/>
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
     </Grid>
 </Window>

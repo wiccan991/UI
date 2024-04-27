@@ -14,30 +14,29 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="1*"/>
-           
         </Grid.ColumnDefinitions>
         <ListBox ItemsSource="{Binding Astronauts}" HorizontalContentAlignment="Stretch" SelectedItem="{Binding SelectedAstronaut}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <Border BorderThickness="1" BorderBrush="Black">
+                    <Border BorderThickness="1" BorderBrush="Black" Margin="0,0,0,5">
                         <StackPanel>
-                            <Label Content="{Binding Name}" ></Label>
-                            <Label Content="{Binding Country}" ></Label>
+                            <Label Content="Name: " FontSize="15" FontWeight="Bold"/>
+                            <TextBlock Text="{Binding Name}" FontSize="15" Margin="15,0,0,0"/>
+                            <Label Content="Country: " FontSize="15" FontWeight="Bold"/>
+                            <TextBlock Text="{Binding Country}" FontSize="15" Margin="15,0,0,0"/>
                         </StackPanel>
                     </Border>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <StackPanel Grid.Column="1">
-            <Label Content="Name: " Background="LightBlue" FontSize="15"></Label>
-            <TextBox Text="{Binding SelectedAstronaut.Name}" FontSize="15" Margin="0,0,0,10"></TextBox>
-            <Label Content="Country: " Background="LightBlue" FontSize="15"></Label>
-            <TextBox Text="{Binding SelectedAstronaut.Country}" FontSize="15" Margin="0,0,0,10"></TextBox>
-            <Button Content="Add Driver" Command="{Binding CreateAstronautCommand}" Margin="10" Padding="10"></Button>
-            <Button Content="Delete Driver" Command="{Binding DeleteAstronautCommand}" Margin="10" Padding="10"></Button>
-            <Button Content="Update Driver" Command="{Binding UpdateAstronautCommand}" Margin="10" Padding="10"></Button>
-        
+        <StackPanel Grid.Column="1" Margin="10">
+            <Label Content="Name:" Background="LightBlue" FontSize="15"/>
+            <TextBox Text="{Binding SelectedAstronaut.Name}" FontSize="15" Margin="0,0,0,10"/>
+            <Label Content="Country:" Background="LightBlue" FontSize="15"/>
+            <TextBox Text="{Binding SelectedAstronaut.Country}" FontSize="15" Margin="0,0,0,10"/>
+            <Button Content="Add astronaut" Command="{Binding CreateAstronautCommand}" Margin="0,10" Padding="10"/>
+            <Button Content="Delete astronaut" Command="{Binding DeleteAstronautCommand}" Margin="0,10" Padding="10"/>
+            <Button Content="Update astronaut" Command="{Binding UpdateAstronautCommand}" Margin="0,10" Padding="10"/>
         </StackPanel>
-       
     </Grid>
 </Window>

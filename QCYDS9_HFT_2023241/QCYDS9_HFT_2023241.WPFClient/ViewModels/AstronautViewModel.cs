@@ -55,7 +55,7 @@ namespace QCYDS9_HFT_2023241.WPFClient.ViewModels
 
             if (!IsInDesignMode)
             {
-                Astronauts = new RestCollection<Astronaut>("http://localhost:25601/", "Astronaut");
+                Astronauts = new RestCollection<Astronaut>("http://localhost:25601/", "Astronaut", "hub");
               
                
                 CreateAstronautCommand = new RelayCommand(() =>

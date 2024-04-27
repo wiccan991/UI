@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\Desktop\\egyetem\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Test\\QCYDS9_HFT_2023241.Test.csproj": {}
+    "C:\\Users\\user\\source\\repos\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Test\\QCYDS9_HFT_2023241.Test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\Desktop\\egyetem\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Logic\\QCYDS9_HFT_2023241.Logic.csproj": {
+    "C:\\Users\\user\\source\\repos\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Logic\\QCYDS9_HFT_2023241.Logic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\egyetem\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Logic\\QCYDS9_HFT_2023241.Logic.csproj",
+        "projectUniqueName": "C:\\Users\\user\\source\\repos\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Logic\\QCYDS9_HFT_2023241.Logic.csproj",
         "projectName": "QCYDS9_HFT_2023241.Logic",
-        "projectPath": "C:\\Users\\user\\Desktop\\egyetem\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Logic\\QCYDS9_HFT_2023241.Logic.csproj",
+        "projectPath": "C:\\Users\\user\\source\\repos\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Logic\\QCYDS9_HFT_2023241.Logic.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\egyetem\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Logic\\obj\\",
+        "outputPath": "C:\\Users\\user\\source\\repos\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Logic\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -32,11 +28,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\user\\Desktop\\egyetem\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Models\\QCYDS9_HFT_2023241.Models.csproj": {
-                "projectPath": "C:\\Users\\user\\Desktop\\egyetem\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Models\\QCYDS9_HFT_2023241.Models.csproj"
+              "C:\\Users\\user\\source\\repos\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Models\\QCYDS9_HFT_2023241.Models.csproj": {
+                "projectPath": "C:\\Users\\user\\source\\repos\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Models\\QCYDS9_HFT_2023241.Models.csproj"
               },
-              "C:\\Users\\user\\Desktop\\egyetem\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Repository\\QCYDS9_HFT_2023241.Repository.csproj": {
-                "projectPath": "C:\\Users\\user\\Desktop\\egyetem\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Repository\\QCYDS9_HFT_2023241.Repository.csproj"
+              "C:\\Users\\user\\source\\repos\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Repository\\QCYDS9_HFT_2023241.Repository.csproj": {
+                "projectPath": "C:\\Users\\user\\source\\repos\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Repository\\QCYDS9_HFT_2023241.Repository.csproj"
               }
             }
           }
@@ -45,6 +41,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -66,25 +67,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\user\\Desktop\\egyetem\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Models\\QCYDS9_HFT_2023241.Models.csproj": {
+    "C:\\Users\\user\\source\\repos\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Models\\QCYDS9_HFT_2023241.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\egyetem\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Models\\QCYDS9_HFT_2023241.Models.csproj",
+        "projectUniqueName": "C:\\Users\\user\\source\\repos\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Models\\QCYDS9_HFT_2023241.Models.csproj",
         "projectName": "QCYDS9_HFT_2023241.Models",
-        "projectPath": "C:\\Users\\user\\Desktop\\egyetem\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Models\\QCYDS9_HFT_2023241.Models.csproj",
+        "projectPath": "C:\\Users\\user\\source\\repos\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Models\\QCYDS9_HFT_2023241.Models.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\egyetem\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Models\\obj\\",
+        "outputPath": "C:\\Users\\user\\source\\repos\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Models\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -104,6 +101,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -125,25 +127,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\user\\Desktop\\egyetem\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Repository\\QCYDS9_HFT_2023241.Repository.csproj": {
+    "C:\\Users\\user\\source\\repos\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Repository\\QCYDS9_HFT_2023241.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\egyetem\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Repository\\QCYDS9_HFT_2023241.Repository.csproj",
+        "projectUniqueName": "C:\\Users\\user\\source\\repos\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Repository\\QCYDS9_HFT_2023241.Repository.csproj",
         "projectName": "QCYDS9_HFT_2023241.Repository",
-        "projectPath": "C:\\Users\\user\\Desktop\\egyetem\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Repository\\QCYDS9_HFT_2023241.Repository.csproj",
+        "projectPath": "C:\\Users\\user\\source\\repos\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Repository\\QCYDS9_HFT_2023241.Repository.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\egyetem\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Repository\\obj\\",
+        "outputPath": "C:\\Users\\user\\source\\repos\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Repository\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -157,8 +155,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\user\\Desktop\\egyetem\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Models\\QCYDS9_HFT_2023241.Models.csproj": {
-                "projectPath": "C:\\Users\\user\\Desktop\\egyetem\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Models\\QCYDS9_HFT_2023241.Models.csproj"
+              "C:\\Users\\user\\source\\repos\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Models\\QCYDS9_HFT_2023241.Models.csproj": {
+                "projectPath": "C:\\Users\\user\\source\\repos\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Models\\QCYDS9_HFT_2023241.Models.csproj"
               }
             }
           }
@@ -167,6 +165,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -206,25 +209,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\user\\Desktop\\egyetem\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Test\\QCYDS9_HFT_2023241.Test.csproj": {
+    "C:\\Users\\user\\source\\repos\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Test\\QCYDS9_HFT_2023241.Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\egyetem\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Test\\QCYDS9_HFT_2023241.Test.csproj",
+        "projectUniqueName": "C:\\Users\\user\\source\\repos\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Test\\QCYDS9_HFT_2023241.Test.csproj",
         "projectName": "QCYDS9_HFT_2023241.Test",
-        "projectPath": "C:\\Users\\user\\Desktop\\egyetem\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Test\\QCYDS9_HFT_2023241.Test.csproj",
+        "projectPath": "C:\\Users\\user\\source\\repos\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Test\\QCYDS9_HFT_2023241.Test.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\egyetem\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Test\\obj\\",
+        "outputPath": "C:\\Users\\user\\source\\repos\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Test\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -238,14 +237,14 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\user\\Desktop\\egyetem\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Logic\\QCYDS9_HFT_2023241.Logic.csproj": {
-                "projectPath": "C:\\Users\\user\\Desktop\\egyetem\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Logic\\QCYDS9_HFT_2023241.Logic.csproj"
+              "C:\\Users\\user\\source\\repos\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Logic\\QCYDS9_HFT_2023241.Logic.csproj": {
+                "projectPath": "C:\\Users\\user\\source\\repos\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Logic\\QCYDS9_HFT_2023241.Logic.csproj"
               },
-              "C:\\Users\\user\\Desktop\\egyetem\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Models\\QCYDS9_HFT_2023241.Models.csproj": {
-                "projectPath": "C:\\Users\\user\\Desktop\\egyetem\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Models\\QCYDS9_HFT_2023241.Models.csproj"
+              "C:\\Users\\user\\source\\repos\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Models\\QCYDS9_HFT_2023241.Models.csproj": {
+                "projectPath": "C:\\Users\\user\\source\\repos\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Models\\QCYDS9_HFT_2023241.Models.csproj"
               },
-              "C:\\Users\\user\\Desktop\\egyetem\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Repository\\QCYDS9_HFT_2023241.Repository.csproj": {
-                "projectPath": "C:\\Users\\user\\Desktop\\egyetem\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Repository\\QCYDS9_HFT_2023241.Repository.csproj"
+              "C:\\Users\\user\\source\\repos\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Repository\\QCYDS9_HFT_2023241.Repository.csproj": {
+                "projectPath": "C:\\Users\\user\\source\\repos\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Repository\\QCYDS9_HFT_2023241.Repository.csproj"
               }
             }
           }
@@ -254,6 +253,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -293,7 +297,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

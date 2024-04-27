@@ -20,10 +20,22 @@ namespace QCYDS9_HFT_2023241.Repository
 
         public override void Update(Mission item)
         {
-            var old = Read(item.MissionId);
-            foreach (var prop in old.GetType().GetProperties())
+            //var old = Read(item.MissionId);
+            //foreach (var prop in old.GetType().GetProperties())
+            //{
+            //    prop.SetValue(old, prop.GetValue(item));
+            //}
+            //ctx.SaveChanges();
+
+            var oldItem = Read(item.MissionId);
+            foreach (var prop in oldItem.GetType().GetProperties())
             {
-                prop.SetValue(old, prop.GetValue(item));
+                //prop.SetValue(oldItem, prop.GetValue(item));
+
+                if (prop.GetAccessors().FirstOrDefault(t => t.IsVirtual) == null)
+                {
+                    prop.SetValue(oldItem, prop.GetValue(item));
+                }
             }
             ctx.SaveChanges();
         }

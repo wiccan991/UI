@@ -17,6 +17,7 @@ namespace QCYDS9_HFT_2023241.Repository
         public void Create(T item)
         {
             ctx.Set<T>().Add(item);
+            
             ctx.SaveChanges();
         }
 

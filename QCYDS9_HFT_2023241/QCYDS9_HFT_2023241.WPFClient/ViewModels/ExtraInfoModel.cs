@@ -14,20 +14,28 @@ using System.Windows.Input;
 
 namespace QCYDS9_HFT_2023241.WPFClient.ViewModels
 {
-    public class YoungestAstonautAge
+    public class Crewnfo
     {
-        public double Age { get; set; }
-       
+        public int MissionId { get; set; }
+        public int MillioUSD { get; set; }
+        public string SpacehshipName { get; set; }
     }
+
     public class ExtraInfoModel : ObservableRecipient
     {
-        public RestCollection<Astronaut> Astronauts { get; set; }
-        public RestCollection<Mission> Missons { get; set; }
-        public RestCollection<Spaceship> Spaceships { get; set; }
-        public RestService NonCrud { get; set; }
+        public RestCollection<Crewnfo> crewinfos { get; set; }
 
-        public ObservableCollection<YoungestAstonautAge> YoungestAstonautAgeNonCrud { get; set; }
-        public ICommand YoungestAstonautAgeCommand { get; set; }
+        private Crewnfo selectedcew;
+
+        public Crewnfo Selectedcew
+        {
+            get { return selectedcew; }
+            set
+            {
+                SetProperty(ref selectedcew, value);
+               
+            }
+        }
 
 
         public static bool IsInDesignMode
@@ -38,35 +46,15 @@ namespace QCYDS9_HFT_2023241.WPFClient.ViewModels
                 return (bool)DependencyPropertyDescriptor.FromProperty(prop, typeof(FrameworkElement)).Metadata.DefaultValue;
             }
         }
+
         public ExtraInfoModel()
         {
             if (!IsInDesignMode)
             {
-                //Astronauts = new RestCollection<Astronaut>("http://localhost:25601/", "Astronaut");
-                //Missons = new RestCollection<Mission>("http://localhost:25601/", "Mission");
-                NonCrud = new RestService("http://localhost:25601");
-                YoungestAstonautAgeCommand = new RelayCommand(
-                   () =>
-                    {
-                        var a = NonCrud.Get<double>("Extrainfo/GetYoungestAstonautAge");
-                        List<string> list = new List<string>();
-                        foreach (var item in Astronauts)
-                        {
-                            list.Add(item.Name);
-                        }
-                        int i = 0;
-                        foreach (var item in a)
-                        {
-                            YoungestAstonautAge avaragePointClass = new YoungestAstonautAge();
-                            avaragePointClass.Age = item;
-
-                            YoungestAstonautAgeNonCrud.Add(avaragePointClass);
-                            i++;
-                        }
-                    }
-                    );
+                crewinfos = new RestCollection<Crewnfo>("http://localhost:25601/", "CrewInfo/CrewInfo");
             }
-
         }
+
+
     }
 }

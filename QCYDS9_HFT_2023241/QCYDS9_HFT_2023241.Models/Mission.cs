@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
+using System.Threading.Tasks;
 
 namespace QCYDS9_HFT_2023241.Models
 {
@@ -57,6 +58,11 @@ namespace QCYDS9_HFT_2023241.Models
         public override string ToString()
         {
             return $"{Name}";
+        }
+
+        public static async Task Add(Mission mission)
+        {
+            throw new NotImplementedException();
         }
     }
     }

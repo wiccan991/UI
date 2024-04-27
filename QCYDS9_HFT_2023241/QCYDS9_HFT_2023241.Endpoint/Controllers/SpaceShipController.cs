@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
+using QCYDS9_HFT_2023241.Endpoint.Services;
 using QCYDS9_HFT_2023241.Logic;
 using QCYDS9_HFT_2023241.Models;
 using System.Collections.Generic;
@@ -12,10 +14,12 @@ namespace QCYDS9_HFT_2023241.Endpoint.Controllers
     public class SpaceShipController : ControllerBase
     {
         ISpacehsipLogic slogic;
+        IHubContext<SignalRHub> hub;
 
-        public SpaceShipController(ISpacehsipLogic slogic)
+        public SpaceShipController(ISpacehsipLogic slogic, IHubContext<SignalRHub> hub)
         {
             this.slogic = slogic;
+            this.hub = hub;
         }
 
         [HttpGet]
@@ -35,6 +39,7 @@ namespace QCYDS9_HFT_2023241.Endpoint.Controllers
         public void Create([FromBody] Spaceship value)
         {
             this.slogic.Create(value);
+            hub.Clients.All.SendAsync("SpaceshipCreated", value);
         }
 
 
@@ -42,13 +47,16 @@ namespace QCYDS9_HFT_2023241.Endpoint.Controllers
         public void Update([FromBody] Spaceship value)
         {
             this.slogic.Update(value);
+            hub.Clients.All.SendAsync("SpaceshipCreated", value);
         }
 
 
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+            var SpaceshipToDeleted = this.slogic.Read(id);
             this.slogic.Delete(id);
+            hub.Clients.All.SendAsync("spaceshipDeleted", SpaceshipToDeleted);
         }
     }
 }

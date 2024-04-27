@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
+using QCYDS9_HFT_2023241.Endpoint.Services;
 using QCYDS9_HFT_2023241.Logic;
 using QCYDS9_HFT_2023241.Models;
 using System.Collections.Generic;
@@ -15,10 +17,12 @@ namespace QCYDS9_HFT_2023241.Endpoint.Controllers
     {
 
         IMissionLogic mlogic;
+        IHubContext<SignalRHub> hub;
 
-        public MissionController(IMissionLogic mlogic)
+        public MissionController(IMissionLogic mlogic, IHubContext<SignalRHub> hub)
         {
             this.mlogic = mlogic;
+            this.hub = hub;
         }
 
         [HttpGet]
@@ -38,6 +42,7 @@ namespace QCYDS9_HFT_2023241.Endpoint.Controllers
         public void Create([FromBody] Mission value)
         {
             this.mlogic.Create(value);
+            hub.Clients.All.SendAsync("MissionCreated", value);
         }
 
 
@@ -45,13 +50,17 @@ namespace QCYDS9_HFT_2023241.Endpoint.Controllers
         public void Update([FromBody] Mission value)
         {
             this.mlogic.Update(value);
+
+            hub.Clients.All.SendAsync("MissionUpdated", value);
         }
 
 
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+            var MissionToDeleted = this.mlogic.Read(id);
             this.mlogic.Delete(id);
+            hub.Clients.All.SendAsync("MissionDeleted", MissionToDeleted);
         }
     }
     }

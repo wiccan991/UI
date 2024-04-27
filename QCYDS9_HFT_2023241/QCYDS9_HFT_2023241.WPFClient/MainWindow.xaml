@@ -6,25 +6,45 @@
         xmlns:local="clr-namespace:QCYDS9_HFT_2023241.WPFClient"
         xmlns:local1="clr-namespace:QCYDS9_HFT_2023241.WPFClient.ViewModels"
         mc:Ignorable="d"
-        Title="Féléves Feladat" Height="450" Width="800">
+        Title="NASA Space Explorer" Height="600" Width="1000"
+        Background="#FFFFFF" Foreground="#333333">
+
     <Window.DataContext>
         <local:MainWindowViewModel/>
     </Window.DataContext>
 
-        <Grid>
+    <Grid Background="#F0F0F0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="1*"/>
-            
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-           
-       <Button Command="{Binding astronautWindow}" Content="Astronaut data" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
-        <Button Command="{Binding missionWindow}" Grid.Column="1" Content="Mission data" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
-        <Button Command="{Binding spaceshipWindow }" Grid.Row="1" Content="Spaceship data" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
-        <Button Command="{Binding extrainfoWindow }" Grid.Row="1"  Grid.Column="1" Content="ExtraInfo" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
+
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20">
+            <Image Source="astronaut_icon.png" Width="100" Height="100" Margin="0,0,0,10"/>
+            <Button Command="{Binding astronautWindow}" FontSize="24" Content="Astronaut Database"
+                    Background="#007ACC" Foreground="#FFFFFF" BorderThickness="0" Padding="15,10" FontFamily="Segoe UI"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20">
+            <Image Source="mission_icon.png" Width="100" Height="100" Margin="0,0,0,10"/>
+            <Button Command="{Binding missionWindow}" FontSize="24" Content="Mission Database"
+                    Background="#007ACC" Foreground="#FFFFFF" BorderThickness="0" Padding="15,10" FontFamily="Segoe UI"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20">
+            <Image Source="spaceship_icon.png" Width="100" Height="100" Margin="0,0,0,10"/>
+            <Button Command="{Binding spaceshipWindow}" FontSize="24" Content="Spaceship Database"
+                    Background="#007ACC" Foreground="#FFFFFF" BorderThickness="0" Padding="15,10" FontFamily="Segoe UI"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20">
+            <Image Source="extra_info_icon.png" Width="100" Height="100" Margin="0,0,0,10"/>
+            <Button Command="{Binding extrainfoWindow}" FontSize="24" Content="Extra Info"
+                    Background="#007ACC" Foreground="#FFFFFF" BorderThickness="0" Padding="15,10" FontFamily="Segoe UI"/>
+        </StackPanel>
     </Grid>
 </Window>

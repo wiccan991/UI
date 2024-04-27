@@ -8,6 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using QCYDS9_HFT_2023241.Endpoint.Services;
 using QCYDS9_HFT_2023241.Logic;
 using QCYDS9_HFT_2023241.Models;
 using QCYDS9_HFT_2023241.Repository;
@@ -39,6 +40,7 @@ namespace QCYDS9_HFT_2023241.Endpoint
             services.AddTransient<IAstronautLogic, AstronautLogic>();
             services.AddTransient<IMissionLogic, MissionLogic>();
             services.AddTransient<ISpacehsipLogic, SpacehsipLogic>();
+            services.AddSignalR();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
@@ -66,6 +68,12 @@ namespace QCYDS9_HFT_2023241.Endpoint
                 var response = new { error = exception.Message };
                 await context.Response.WriteAsJsonAsync(response);
             }));
+            app.UseCors(x => x
+                .AllowCredentials()
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .WithOrigins("http://localhost:7582"));
+
 
             app.UseRouting();
 
@@ -74,6 +82,7 @@ namespace QCYDS9_HFT_2023241.Endpoint
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapHub<SignalRHub>("/hub");
             });
         }
     }

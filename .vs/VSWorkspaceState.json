@@ -2,9 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\QCYDS9_HFT_2023241",
-    "\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Client",
-    "\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Repository"
+    "\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.WPFClient",
+    "\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.WPFClient\\ViewModels"
   ],
-  "SelectedNode": "\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Client\\Program.cs",
+  "SelectedNode": "\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.WPFClient\\ViewModels\\ExtraInfoModel.cs",
   "PreviewInSolutionExplorer": false
 }

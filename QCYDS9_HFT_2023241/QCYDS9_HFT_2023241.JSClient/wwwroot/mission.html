@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+</head>
+<body>
+
+    <h1>Mission database</h1>
+
+        <div id="formdiv">
+            <label>Mission name</label>
+            <input type="text" id="missionname" />
+            <label>Mission cost</label>
+            <input type="text" id="cost" />
+            <label>Mission Objective</label>
+            <input type="text" id="obj" />
+            <label>Mission year</label>
+            <input type="text" id="year" />
+            <label>Mission spaceship ID</label>
+            <input type="text" id="sid" />
+
+            <button type="button" onclick="create1()">Add Mission</button>
+        </div>
+
+
+
+    <div id="updateformdiv">
+        <label>Mission name</label>
+        <input type="text" id="missionname1" />
+       
+        <label>Mission Objective</label>
+        <input type="text" id="obj1" />
+        <button onclick="update()" type="button">Update Mission</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Spaceship ID</th>
+                <th>Name</th>
+                <th>Cost mDollar</th>
+                <th>Objective</th>
+                <th>Lunch year</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="resularea">
+        </tbody>
+
+    </table>
+
+    <div id="resultId">
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

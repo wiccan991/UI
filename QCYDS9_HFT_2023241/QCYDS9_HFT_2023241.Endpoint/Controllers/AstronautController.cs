@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
+using QCYDS9_HFT_2023241.Endpoint.Services;
 using QCYDS9_HFT_2023241.Logic;
 using QCYDS9_HFT_2023241.Models;
 using System.Collections.Generic;
@@ -14,10 +16,11 @@ namespace QCYDS9_HFT_2023241.Endpoint.Controllers
     {
 
         IAstronautLogic alogic;
-
-        public AstronautController(IAstronautLogic alogic)
+        IHubContext<SignalRHub> hub;
+        public AstronautController(IAstronautLogic alogic, IHubContext<SignalRHub> hub)
         {
             this.alogic = alogic;
+            this.hub = hub;
         }
         
         // GET: api/<AstonautController>
@@ -39,6 +42,8 @@ namespace QCYDS9_HFT_2023241.Endpoint.Controllers
         public void Create([FromBody] Astronaut value)
         {
             this.alogic.Create(value);
+            hub.Clients.All.SendAsync("AstonautCreated", value);
+
         }
 
         // PUT api/<AstonautController>/5
@@ -46,13 +51,16 @@ namespace QCYDS9_HFT_2023241.Endpoint.Controllers
         public void Update([FromBody] Astronaut value)
         {
             this.alogic.Update(value);
+            hub.Clients.All.SendAsync("AstonautUpdated", value);
         }
 
         // DELETE api/<AstonautController>/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+            var AstonautToDeleted = this.alogic.Read(id);
             this.alogic.Delete(id);
+            hub.Clients.All.SendAsync("AstonautDeleted",  AstonautToDeleted);
         }
 
     }

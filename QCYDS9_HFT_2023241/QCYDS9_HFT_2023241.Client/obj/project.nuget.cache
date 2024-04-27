@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gXQKkm02viI+4nVAjGIzSBvI29XBFiKFbEq3r0DkJdew5qkVlEPnwRC7hvmtdq0DqDh7N/UHeQC6Nbl8FJ3z5Q==",
+  "dgSpecHash": "2EW8l6MLPnyb46Pmiwf+yuWyC09wsONmbCZegKUZmRXk7orCzHAy9mmZk2RSg7//u43DoCt33Ne2Doxm9aXm9Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user\\Desktop\\egyetem\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Client\\QCYDS9_HFT_2023241.Client.csproj",
+  "projectFilePath": "C:\\Users\\user\\source\\repos\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Client\\QCYDS9_HFT_2023241.Client.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\consolemenu-simple\\2.6.1\\consolemenu-simple.2.6.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.7\\microsoft.aspnet.webapi.client.5.2.7.nupkg.sha512",

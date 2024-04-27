@@ -21,7 +21,6 @@ namespace QCYDS9_HFT_2023241.WPFClient
     {
         public ExtraInfoWindow()
         {
-            InitializeComponent();
         }
     }
 }

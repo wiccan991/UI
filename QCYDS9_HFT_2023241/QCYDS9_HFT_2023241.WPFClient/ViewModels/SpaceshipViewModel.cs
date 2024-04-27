@@ -53,7 +53,7 @@ namespace QCYDS9_HFT_2023241.WPFClient.ViewModels
 
             if (!IsInDesignMode)
             {
-                Spaceships = new RestCollection<Spaceship>("http://localhost:25601/", "Spaceship");
+                Spaceships = new RestCollection<Spaceship>("http://localhost:25601/", "Spaceship", "hub");
 
 
                 CreateSpaceshipCommand = new RelayCommand(() =>

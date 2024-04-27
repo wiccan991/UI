@@ -4,9 +4,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:QCYDS9_HFT_2023241.WPFClient"
-       xmlns:local1="clr-namespace:QCYDS9_HFT_2023241.WPFClient.ViewModels"
+        xmlns:local1="clr-namespace:QCYDS9_HFT_2023241.WPFClient.ViewModels"
         mc:Ignorable="d"
-        Title="MissionWindow" Height="450" Width="800">
+        Title="SpaceshipWindow" Height="450" Width="800">
     <Window.DataContext>
         <local1:SpaceshipViewModel/>
     </Window.DataContext>
@@ -14,38 +14,37 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="1*"/>
-
         </Grid.ColumnDefinitions>
         <ListBox ItemsSource="{Binding Spaceships}" HorizontalContentAlignment="Stretch" SelectedItem="{Binding SelectedSpaceship}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <Border BorderThickness="1" BorderBrush="Black">
+                    <Border BorderThickness="1" BorderBrush="Black" Margin="0,0,0,5">
                         <StackPanel>
-                            <Label Content="{Binding Id}" ></Label>
-                            <Label Content="{Binding Name}" ></Label>
-                            <Label Content="{Binding MakeYear}" ></Label>
-                            <Label Content="{Binding Speed}" ></Label>
+                            <Label Content="ID: " FontSize="15" FontWeight="Bold"/>
+                            <TextBlock Text="{Binding Id}" FontSize="15" Margin="15,0,0,0"/>
+                            <Label Content="Name: " FontSize="15" FontWeight="Bold"/>
+                            <TextBlock Text="{Binding Name}" FontSize="15" Margin="15,0,0,0"/>
+                            <Label Content="Make year: " FontSize="15" FontWeight="Bold"/>
+                            <TextBlock Text="{Binding MakeYear}" FontSize="15" Margin="15,0,0,0"/>
+                            <Label Content="Speed: " FontSize="15" FontWeight="Bold"/>
+                            <TextBlock Text="{Binding Speed}" FontSize="15" Margin="15,0,0,0"/>
                         </StackPanel>
                     </Border>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <StackPanel Grid.Column="1">
-            <Label Content="ID: " Background="LightBlue" FontSize="15"></Label>
-            <TextBox Text="{Binding SelectedSpaceship.Id}" FontSize="15" Margin="0,0,0,10">
-                
-            </TextBox><Label Content="Name: " Background="LightBlue" FontSize="15"></Label>
-            <TextBox Text="{Binding SelectedSpaceship.Name}" FontSize="15" Margin="0,0,0,10"></TextBox>
-            <Label Content="Speed: " Background="LightBlue" FontSize="15"></Label>
-            <TextBox Text="{Binding SelectedSpaceship.Speed}" FontSize="15" Margin="0,0,0,10"></TextBox>
-            <Label Content="Make year: " Background="LightBlue" FontSize="15"></Label>
-            <TextBox Text="{Binding SelectedSpaceship.MakeYear}" FontSize="15" Margin="0,0,0,10"></TextBox>
-            <Button Content="Add Spaceship" Command="{Binding CreateSpaceshipCommand}" Margin="10" Padding="10"></Button>
-            <Button Content="Delete Spaceship" Command="{Binding DeleteSpaceshipCommand}" Margin="10" Padding="10"></Button>
-            <Button Content="Update Spaceship" Command="{Binding UpdateSpaceshipCommand}" Margin="10" Padding="10"></Button>
-
+        <StackPanel Grid.Column="1" Margin="10">
+            <Label Content="ID:" Background="LightBlue" FontSize="15"/>
+            <TextBox Text="{Binding SelectedSpaceship.Id}" FontSize="15" Margin="0,0,0,10"/>
+            <Label Content="Name:" Background="LightBlue" FontSize="15"/>
+            <TextBox Text="{Binding SelectedSpaceship.Name}" FontSize="15" Margin="0,0,0,10"/>
+            <Label Content="Make year:" Background="LightBlue" FontSize="15"/>
+            <TextBox Text="{Binding SelectedSpaceship.MakeYear}" FontSize="15" Margin="0,0,0,10"/>
+            <Label Content="Speed:" Background="LightBlue" FontSize="15"/>
+            <TextBox Text="{Binding SelectedSpaceship.Speed}" FontSize="15" Margin="0,0,0,10"/>
+            <Button Content="Add Spaceship" Command="{Binding CreateSpaceshipCommand}" Margin="0,10" Padding="10"/>
+            <Button Content="Delete Spaceship" Command="{Binding DeleteSpaceshipCommand}" Margin="0,10" Padding="10"/>
+            <Button Content="Update Spaceship" Command="{Binding UpdateSpaceshipCommand}" Margin="0,10" Padding="10"/>
         </StackPanel>
-
-
     </Grid>
 </Window>

@@ -42,10 +42,10 @@ namespace QCYDS9_HFT_2023241.Logic
 
         public Spaceship Read(int id)
         {
-            var Spaceship = this.repo.Read(id);
-            if (Spaceship == null)
+            var mission = this.repo.Read(id);
+            if (mission == null)
             {
-                throw new ArgumentException("Spaceship not exists.");
+                throw new ArgumentException("Astonaut not exists.");
             }
             return this.repo.Read(id);
         }

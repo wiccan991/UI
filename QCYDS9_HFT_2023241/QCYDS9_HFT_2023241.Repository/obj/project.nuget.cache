@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7ez5KCtX3PH8CoPhsZdLSMwzjjX0651Lz282vvA5LFk5XBRAg7o5ck8qISvz/qWAM8+SEweYMEi2J0qFwrTX4A==",
+  "dgSpecHash": "Ixmy7bnkhj3VjUN0ZTCqyN+BNTYj8pYqJlI01TBj4LXve5ZT815cjnZd6oJWE+Jj0ubVaIkShWnnbWPTbCAYfQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user\\Desktop\\egyetem\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Repository\\QCYDS9_HFT_2023241.Repository.csproj",
+  "projectFilePath": "C:\\Users\\user\\source\\repos\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241\\QCYDS9_HFT_2023241.Repository\\QCYDS9_HFT_2023241.Repository.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

@@ -54,7 +54,7 @@ namespace QCYDS9_HFT_2023241.WPFClient.ViewModels
 
             if (!IsInDesignMode)
             {
-                Missions = new RestCollection<Mission>("http://localhost:25601/", "Mission");
+                Missions = new RestCollection<Mission>("http://localhost:25601/", "Mission", "hub");
 
 
                 CreateMissionCommand = new RelayCommand(() =>
@@ -65,6 +65,7 @@ namespace QCYDS9_HFT_2023241.WPFClient.ViewModels
                         Name = SelectedMission.Name,
                         Objective = SelectedMission.Objective,
                         SpaceshipId=SelectedMission.SpaceshipId,
+                        
                     });
                 });
                 DeleteMissionCommand = new RelayCommand(() => Missions.Delete(SelectedMission.MissionId), () => { return SelectedMission != null; });
