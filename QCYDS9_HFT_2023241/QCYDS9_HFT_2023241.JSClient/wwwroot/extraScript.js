@@ -1,4 +1,4 @@
-﻿getdata()
+getdata()
 
 async function getdata() {
 
@@ -10,9 +10,9 @@ async function getdata() {
             display();
         });
 }
-    function getResultDriverWins() {
+function GetAstronautsByMissionId() {
         document.getElementById('resultId').innerHTML = '';
-        const alma = document.getElementById('driverName').value;
+        const alma = document.getElementById('ide').value;
         console.log(alma);
         fetch('http://localhost:25601/Extrainfo/GetAstronautsByMissionId/2')
             .then(response => response.text())
@@ -26,7 +26,7 @@ async function getdata() {
                 resultDiv.innerHTML = '<p>An error occurred while fetching data</p>';
             });
     }
-function getResultMostWins() {
+function GetAmericansCountInfo() {
     document.getElementById('resultId').innerHTML = '';
     fetch('http://localhost:25601/Extrainfo/GetAmericansCountInfo')
         .then(response => response.text())
